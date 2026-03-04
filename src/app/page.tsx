@@ -1,0 +1,394 @@
+import type { ReactNode } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { Facebook, Instagram, Star, Twitter } from "lucide-react";
+
+const navItems = ["Home", "Services", "Case Studies", "About", "Contact"];
+
+const serviceCards = [
+  {
+    title: "Commercial Pool Renovations",
+    body: "From minor to major renovations, we modernize commercial pools and spas with energy-efficient upgrades.",
+    image: "/images/expert-comercial-pool.png",
+    alt: "Commercial pool design planning board and draft layout",
+    icon: <PoolPlanIcon />,
+  },
+  {
+    title: "Water Features And Decks",
+    body: "We renovate decks, fountains, waterfalls, and custom water features to transform amenity experiences.",
+    image: "/images/primium-pool.png",
+    alt: "Pool renovation visual with swimmer and blue water",
+    icon: <RenovationIcon />,
+  },
+  {
+    title: "Maintenance And Equipment",
+    body: "Commercial maintenance plans and modern equipment systems keep water clean, clear, and efficient year-round.",
+    image: "/images/advanced.png",
+    alt: "Commercial pool equipment room and maintenance infrastructure",
+    icon: <GearIcon />,
+  },
+];
+
+const testimonials = [
+  {
+    name: "Sarah J.",
+    message:
+      "They improved our rooftop pool and deck appearance and guided each finish with clear renovation recommendations.",
+    image: "/images/test1.png",
+    alt: "Portrait of Sarah testimonial client",
+  },
+  {
+    name: "Michael B.",
+    message:
+      "Their team designed complete commercial equipment systems with newer technologies and practical budget planning.",
+    image: "/images/test2.png",
+    alt: "Portrait of Michael testimonial client",
+  },
+  {
+    name: "David L.",
+    message:
+      "From consultation through execution, they delivered an upgraded amenity with cleaner flow and better efficiency.",
+    image: "/images/test3.png",
+    alt: "Portrait of David testimonial client",
+  },
+];
+
+export default function Home() {
+  return (
+    <main className="min-h-screen text-[#eaf4f6]">
+      <div className="pb-10">
+        <header className="rounded-t-md border-b border-[#3f4b57]/70 bg-[#1f252d]/95 px-4 py-4 sm:px-8">
+          <div className="flex container mx-auto flex-wrap items-center justify-between gap-5">
+            <div className="flex items-center gap-4">
+              <div className="relative h-16 w-16 overflow-hidden rounded-sm border border-zinc-600 bg-white p-1 shadow-[0_0_18px_rgba(255,255,255,0.14)] sm:h-20 sm:w-20">
+                <Image
+                  src="/images/logo.webp"
+                  alt="Atlas Pool Solutions logo"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+            </div>
+            <nav className="w-full sm:w-auto">
+              <ul className="flex flex-wrap justify-start gap-4 text-sm font-semibold text-[#d8dfe3] sm:justify-end sm:gap-8 sm:text-[15px]">
+                {navItems.map((item) => (
+                  <li key={item} className="cursor-pointer transition hover:text-[#e63946]">
+                    <Link href={`#${item.toLowerCase().replace(" ", "-")}`}>{item}</Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </div>
+        </header>
+
+        <section className="relative bg-linear-to-r from-[#1d232b] via-[#2a313a] to-[#1b2229] px-4 pb-10 pt-10 sm:px-8 sm:pb-12 sm:pt-16 bg-[url('/images/hero2.png')] bg-cover bg-top-left">
+          <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-black via-black/25 to-transparent" />
+          <div className="container mx-auto">
+            <div className="pointer-events-none absolute left-1/2 top-0 h-full w-full -translate-x-1/2 bg-[radial-gradient(circle_at_38%_28%,rgba(0,0,0,0.84)_0%,rgba(0,0,0,0.78)_28%,rgba(0,0,0,0.0)_62%)]" />
+            <div className="relative z-10 max-w-5xl">
+              <h1 className="max-w-5xl text-3xl font-black uppercase leading-[0.95] text-[#f6fbfc] drop-shadow-[0_3px_4px_rgba(0,0,0,0.85)] sm:text-5xl lg:text-6xl">
+                Atlas Pool Solutions.
+                <br />
+                Rooftop Pool And Spa Renovations
+              </h1>
+              <p className="mt-4 max-w-175 text-base leading-7 text-[#d3dbe0] sm:text-lg sm:leading-8">
+                Specializing in rooftop pool and spa renovations for commercial properties across
+                Greater Los Angeles and Orange County.
+              </p>
+              <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
+                <Link
+                  href="#contact"
+                  className="w-full rounded-full border border-[#f06a74] bg-gradient-to-b from-[#ef4b57] to-[#c92d3a] px-6 py-3 text-center text-sm font-black uppercase tracking-wide text-[#fdfcfc] shadow-[0_0_16px_rgba(230,57,70,0.45)] transition hover:brightness-105 sm:w-auto sm:px-8 sm:text-base"
+                >
+                  Schedule A Pool Consultation
+                </Link>
+              </div>
+            </div>
+
+            <div className="relative z-10 mt-10 grid gap-5 lg:grid-cols-3">
+              {serviceCards.map((card) => (
+                <article
+                  key={card.title}
+                  className="rounded-2xl border border-[#4f5f6d] bg-gradient-to-b from-[#2a3139]/95 to-[#20272f]/95 p-3 shadow-[0_12px_26px_rgba(0,0,0,0.35)]"
+                >
+                  <div className="relative h-44 overflow-hidden rounded-xl border border-white/20">
+                    <Image src={card.image} alt={card.alt} fill className="object-cover" />
+                  </div>
+                  <div className="mt-4 flex items-start gap-3">
+                    <div className="mt-1 text-[#9ec2cd]">{card.icon}</div>
+                    <div>
+                      <h3 className="text-2xl font-black uppercase leading-tight text-[#f4fbfd] sm:text-3xl">
+                        {card.title}
+                      </h3>
+                      <p className="mt-3 text-base leading-6 text-[#c7d2d9]">{card.body}</p>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="projects" className=" bg-[#1b2229] px-4 pb-10 pt-10 sm:px-8">
+          <div className="container mx-auto">
+            <div className="grid grid-cols-1 gap-5 rounded-[18px] border border-[#495867] bg-[#252d36]/95 p-4 shadow-[0_10px_24px_rgba(0,0,0,0.25)] lg:grid-cols-12 lg:p-6">
+              <div className="relative h-64 overflow-hidden rounded-3xl border border-[#566879] shadow-inner lg:col-span-7 lg:h-auto">
+                <Image
+                  src="/images/clean_features.png"
+                  alt="Rooftop luxury pool development with deck and seating"
+                  fill
+                  className="object-cover "
+                />
+              </div>
+              <div className="flex flex-col justify-center px-1 py-1 sm:px-2 sm:py-2 lg:col-span-5">
+                <h2 className="text-3xl font-black leading-[0.95] text-[#f0f7f8] sm:text-4xl lg:text-5xl">
+                  Unleash Your Imagination
+                </h2>
+                <p className="mt-4 text-base leading-7 text-[#c9d4da] sm:text-lg sm:leading-8 lg:text-2xl">
+                  We install modern technologies for optimal efficiency, cleaner water systems, and
+                  upgraded commercial amenity performance.
+                </p>
+                <Link
+                  href="#projects"
+                  className="mt-6 w-full rounded-full border border-[#f06a74] bg-gradient-to-b from-[#ef4b57] to-[#c92d3a] px-6 py-3 text-center text-base font-black uppercase tracking-wide text-[#ffffff] shadow-[0_0_14px_rgba(230,57,70,0.4)] sm:w-fit sm:px-10 sm:text-lg"
+                >
+                  Explore Projects
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div className="container mx-auto">
+            <div className="mt-6 grid gap-5 lg:grid-cols-3">
+              {testimonials.map((item) => (
+                <article
+                  key={item.name}
+                  className="rounded-2xl border border-[#4f5f6d] bg-[#242d36]/95 p-3"
+                >
+                  <div className="relative h-64 overflow-hidden rounded-xl">
+                    <Image src={item.image} alt={item.alt} fill className="object-cover" />
+                  </div>
+                  <div className="-mt-3 rounded-b-2xl border border-[#566879] bg-linear-to-br from-[#2a3139]/95 to-[#1e252d]/95 p-4 pt-8 shadow-[0_10px_25px_rgba(0,0,0,0.45)]">
+                    <p className="text-xl leading-6 text-[#d7dee2]">{item.message}</p>
+                    <div className="mt-3 flex items-center justify-between text-[#9ec2cd]">
+                      <p className="text-2xl font-black text-[#f4fbfd] sm:text-3xl">{item.name}</p>
+                      <div className="flex items-center gap-1 text-[#f1d2a7]">
+                        {Array.from({ length: 5 }).map((_, i) => (
+                          <Star
+                            key={i}
+                            className="h-5 w-5 fill-current sm:h-6 sm:w-6"
+                            strokeWidth={1.75}
+                          />
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+        <section>
+          <div className="container mx-auto">
+            <div className="flex py-8 flex-col gap-4 border-b border-[#3f4b57] sm:flex-row sm:items-center">
+              <div className="relative h-28 w-28 overflow-hidden rounded-xl border border-[#566879]">
+                <Image
+                  src="/images/test3.png"
+                  alt="Founder Tony Harris portrait"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div id="contact">
+                <h3 className="text-2xl font-semibold text-[#f0f7f8] sm:text-3xl lg:text-4xl">
+                  Atlas Pool Solutions
+                </h3>
+                <p className="mt-1 max-w-4xl text-base leading-7 text-[#cfd8dd] sm:text-lg sm:leading-8 lg:text-2xl">
+                  We stay current with the latest industry advances, so your project can become a
+                  beautiful, energy-efficient smart pool environment.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <footer className=" bg-linear-to-b from-[#1f252d] to-[#181e25]">
+          <div className="container mx-auto">
+            <div className="grid gap-8 pb-8 pt-7 lg:grid-cols-5">
+              <div>
+                <div className="relative h-44 w-44 overflow-hidden rounded-md border border-zinc-600 bg-white p-1">
+                  <Image
+                    src="/images/logo.webp"
+                    alt="Atlas Pool Solutions logo"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+            
+              </div>
+
+              <div>
+                <h4 className="text-2xl font-medium text-[#dbe3e7]">Quick Links:</h4>
+                <ul className="mt-2 space-y-1 text-md font-normal text-[#cfd8dd]">
+                  {navItems.map((item) => (
+                    <li key={item}>
+                      <Link
+                        href={`#${item.toLowerCase().replace(" ", "-")}`}
+                        className="transition hover:text-[#e63946]"
+                      >
+                        {item}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div>
+                <h4 className="text-2xl font-medium text-[#dbe3e7]">Follow Us:</h4>
+                <div className="mt-3 flex gap-2">
+                  {[
+                    {
+                      Icon: Facebook,
+                      href: "https://www.facebook.com/atlaspoolsolutions",
+                      label: "Facebook",
+                    },
+                    {
+                      Icon: Instagram,
+                      href: "https://www.instagram.com/atlaspoolsolutions",
+                      label: "Instagram",
+                    },
+                    {
+                      Icon: Twitter,
+                      href: "https://x.com/atlaspoolsolutions",
+                      label: "X (Twitter)",
+                    },
+                  ].map(({ Icon, href, label }) => (
+                    <a
+                      key={label}
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={label}
+                      className="grid h-10 w-10 place-items-center rounded-full bg-[#e63946] text-[#ffffff] transition hover:brightness-110"
+                    >
+                      <Icon className="h-5 w-5" strokeWidth={2.25} />
+                    </a>
+                  ))}
+                </div>
+                <p className="mt-5 text-2xl font-medium text-[#dbe3e7]">Contact Us</p>
+               
+                <p className="mt-3 text-md text-[#cfd8dd]">showroom@atlaspoolsolutions.com</p>
+                <p className="mt-2 text-md text-[#cfd8dd]">310.341.6123</p>
+                <p className="mt-3 text-sm leading-6 text-[#cfd8dd]">
+                  For work orders for current clients, please contact us at
+                  Operations@atlaspoolsolutions.com at any time.
+                </p>
+              </div>
+
+              <div>
+                <h4 className="text-2xl font-medium text-[#dbe3e7]">Hours</h4>
+                <p className="mt-2 text-base leading-7 text-[#cfd8dd]">
+                  Mon - By Appointment
+                  <br />
+                  Tue - By Appointment
+                  <br />
+                  Wed - By Appointment
+                  <br />
+                  Thu - By Appointment
+                  <br />
+                  Fri - By Appointment
+                  <br />
+                  Sat - By Appointment
+                  <br />
+                  Sun - Closed
+                </p>
+                <p className="mt-3 text-sm leading-6 text-[#cfd8dd]">
+                  Monday - Friday: Appointment Only
+                  <br />
+                  Saturday: Appointment Only
+                  <br />
+                  Sunday: Closed
+                </p>
+              </div>
+              <div>
+                    <p className="mt-5 text-lg font-black uppercase text-[#dce3e7] sm:text-xl">
+                  Address:
+                </p>
+                <p className="mt-1 text-base leading-7 text-[#cfd8dd] sm:text-lg">
+                  Atlas Pool Solutions, Inc
+                  <br />
+                  3693 San Gabriel River Parkway,
+                  <br />
+                  Pico Rivera, California 90660, United States
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="border-t border-[#3f4b57] bg-[#131920] py-4 text-center text-sm font-semibold text-[#c7d1d6]">
+            &copy; {new Date().getFullYear()} Atlas Pool Solutions, Inc. - All Rights Reserved
+          </div>
+        </footer>
+      </div>
+    </main>
+  );
+}
+
+function IconFrame({ children }: { children: ReactNode }) {
+  return (
+    <span className="grid h-12 w-12 shrink-0 place-items-center rounded-md border border-[#61717f] bg-[#2a3139]/90">
+      {children}
+    </span>
+  );
+}
+
+function PoolPlanIcon() {
+  return (
+    <IconFrame>
+      <svg
+        viewBox="0 0 24 24"
+        className="h-7 w-7"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.8"
+      >
+        <rect x="3" y="4" width="18" height="15" rx="1" />
+        <path d="M8 9h8M8 13h5M6 19v2M18 19v2" />
+      </svg>
+    </IconFrame>
+  );
+}
+
+function RenovationIcon() {
+  return (
+    <IconFrame>
+      <svg
+        viewBox="0 0 24 24"
+        className="h-7 w-7"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.8"
+      >
+        <path d="M4 11h16M4 16h16" />
+        <path d="M8 6v12M16 6v12" />
+        <path d="M3 19h18" />
+      </svg>
+    </IconFrame>
+  );
+}
+
+function GearIcon() {
+  return (
+    <IconFrame>
+      <svg
+        viewBox="0 0 24 24"
+        className="h-7 w-7"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.8"
+      >
+        <circle cx="12" cy="12" r="2.5" />
+        <path d="M19.4 15a1 1 0 0 0 .2 1.1l.1.1a1.8 1.8 0 0 1-2.6 2.6l-.1-.1a1 1 0 0 0-1.1-.2 1 1 0 0 0-.6.9V20a1.8 1.8 0 0 1-3.6 0v-.2a1 1 0 0 0-.6-.9 1 1 0 0 0-1.1.2l-.1.1a1.8 1.8 0 0 1-2.6-2.6l.1-.1a1 1 0 0 0 .2-1.1 1 1 0 0 0-.9-.6H6a1.8 1.8 0 1 1 0-3.6h.2a1 1 0 0 0 .9-.6 1 1 0 0 0-.2-1.1l-.1-.1a1.8 1.8 0 1 1 2.6-2.6l.1.1a1 1 0 0 0 1.1.2h.1a1 1 0 0 0 .5-.9V6a1.8 1.8 0 1 1 3.6 0v.2a1 1 0 0 0 .6.9 1 1 0 0 0 1.1-.2l.1-.1a1.8 1.8 0 1 1 2.6 2.6l-.1.1a1 1 0 0 0-.2 1.1v.1a1 1 0 0 0 .9.5h.2a1.8 1.8 0 1 1 0 3.6h-.2a1 1 0 0 0-.9.6Z" />
+      </svg>
+    </IconFrame>
+  );
+}

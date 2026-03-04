@@ -1,0 +1,10 @@
+@import "tailwindcss";
+@source "./**/*.{js,ts,jsx,tsx,mdx}";
+@source "../components/**/*.{js,ts,jsx,tsx,mdx}";
+
+body {
+  background: #1a2027;
+  color: #e6edf0;
+  font-family: Arial, Helvetica, sans-serif;
+  text-rendering: geometricPrecision;
+}

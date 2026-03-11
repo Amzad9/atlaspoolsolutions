@@ -172,7 +172,7 @@ export default function Home() {
           </div>
         </section>
         <section>
-          <div className="container mx-auto">
+          <div className="container mx-auto px-3">
             <div className="flex py-8 flex-col gap-4 border-b border-[#3f4b57] sm:flex-row sm:items-center">
               <div className="relative h-28 w-28 overflow-hidden rounded-xl border border-[#566879]">
                 <Image

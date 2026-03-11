@@ -80,11 +80,11 @@ export default function CaseStudiesPage() {
               <p className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/6 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-[#d3dbe0] shadow-[0_0_0_1px_rgba(255,255,255,0.04)] sm:text-sm">
                 Project Focus
               </p>
-              <h1 className="mt-5 text-5xl font-black uppercase leading-[0.9] text-[#f6fbfc] drop-shadow-[0_3px_6px_rgba(0,0,0,0.72)] sm:text-6xl lg:text-7xl">
+              <h2 className="mt-5 text-4xl font-black uppercase leading-[0.9] text-[#f6fbfc] drop-shadow-[0_3px_6px_rgba(0,0,0,0.72)] sm:text-6xl lg:text-6xl">
                 Case Studies
                 <br />
                 Built Around Better Amenities
-              </h1>
+              </h2>
               <p className="mt-5 max-w-[44rem] text-base leading-7 text-[#d3dbe0] sm:text-lg sm:leading-8">
                 The live Atlas Pool Solutions site highlights the renovation, deck, water feature,
                 and equipment work that transforms commercial pool amenities. These featured project

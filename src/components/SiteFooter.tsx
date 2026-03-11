@@ -12,7 +12,7 @@ const socialIcons = {
 
 export default function SiteFooter() {
   return (
-    <footer className="bg-linear-to-b from-[#1f252d] to-[#181e25]">
+    <footer className="bg-linear-to-b from-[#1f252d] to-[#181e25] px-3 md:px-0">
       <div className="container mx-auto">
         <div className="grid gap-8 pb-8 pt-7 lg:grid-cols-5">
           <div>

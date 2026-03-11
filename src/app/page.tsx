@@ -1,9 +1,10 @@
 import type { ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Facebook, Instagram, Star, Twitter } from "lucide-react";
+import { Star } from "lucide-react";
 
-const navItems = ["Home", "Services", "Case Studies", "About", "Contact"];
+import SiteFooter from "../components/SiteFooter";
+import SiteHeader from "../components/SiteHeader";
 
 const serviceCards = [
   {
@@ -57,31 +58,12 @@ export default function Home() {
   return (
     <main className="min-h-screen text-[#eaf4f6]">
       <div className="pb-10">
-        <header className="rounded-t-md border-b border-[#3f4b57]/70 bg-[#1f252d]/95 px-4 py-4 sm:px-8">
-          <div className="flex container mx-auto flex-wrap items-center justify-between gap-5">
-            <div className="flex items-center gap-4">
-              <div className="relative h-16 w-16 overflow-hidden rounded-sm border border-zinc-600 bg-white p-1 shadow-[0_0_18px_rgba(255,255,255,0.14)] sm:h-20 sm:w-20">
-                <Image
-                  src="/images/logo.webp"
-                  alt="Atlas Pool Solutions logo"
-                  fill
-                  className="object-contain"
-                />
-              </div>
-            </div>
-            <nav className="w-full sm:w-auto">
-              <ul className="flex flex-wrap justify-start gap-4 text-sm font-semibold text-[#d8dfe3] sm:justify-end sm:gap-8 sm:text-[15px]">
-                {navItems.map((item) => (
-                  <li key={item} className="cursor-pointer transition hover:text-[#e63946]">
-                    <Link href={`#${item.toLowerCase().replace(" ", "-")}`}>{item}</Link>
-                  </li>
-                ))}
-              </ul>
-            </nav>
-          </div>
-        </header>
+        <SiteHeader activeLabel="Home" />
 
-        <section className="relative bg-linear-to-r from-[#1d232b] via-[#2a313a] to-[#1b2229] px-4 pb-10 pt-10 sm:px-8 sm:pb-12 sm:pt-16 bg-[url('/images/hero2.png')] bg-cover bg-top-left">
+        <section
+          id="home"
+          className="relative bg-linear-to-r from-[#1d232b] via-[#2a313a] to-[#1b2229] bg-[url('/images/hero2.png')] bg-cover bg-top-left px-4 pb-10 pt-10 sm:px-8 sm:pb-12 sm:pt-16"
+        >
           <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-black via-black/25 to-transparent" />
           <div className="container mx-auto">
             <div className="pointer-events-none absolute left-1/2 top-0 h-full w-full -translate-x-1/2 bg-[radial-gradient(circle_at_38%_28%,rgba(0,0,0,0.84)_0%,rgba(0,0,0,0.78)_28%,rgba(0,0,0,0.0)_62%)]" />
@@ -97,7 +79,7 @@ export default function Home() {
               </p>
               <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
                 <Link
-                  href="#contact"
+                  href="/contact"
                   className="w-full rounded-full border border-[#f06a74] bg-gradient-to-b from-[#ef4b57] to-[#c92d3a] px-6 py-3 text-center text-sm font-black uppercase tracking-wide text-[#fdfcfc] shadow-[0_0_16px_rgba(230,57,70,0.45)] transition hover:brightness-105 sm:w-auto sm:px-8 sm:text-base"
                 >
                   Schedule A Pool Consultation
@@ -105,7 +87,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="relative z-10 mt-10 grid gap-5 lg:grid-cols-3">
+            <div id="services" className="relative z-10 mt-10 grid gap-5 lg:grid-cols-3">
               {serviceCards.map((card) => (
                 <article
                   key={card.title}
@@ -149,16 +131,16 @@ export default function Home() {
                   upgraded commercial amenity performance.
                 </p>
                 <Link
-                  href="#projects"
+                  href="/case-studies"
                   className="mt-6 w-full rounded-full border border-[#f06a74] bg-gradient-to-b from-[#ef4b57] to-[#c92d3a] px-6 py-3 text-center text-base font-black uppercase tracking-wide text-[#ffffff] shadow-[0_0_14px_rgba(230,57,70,0.4)] sm:w-fit sm:px-10 sm:text-lg"
                 >
-                  Explore Projects
+                  Explore Case Studies
                 </Link>
               </div>
             </div>
           </div>
         </section>
-        <section>
+        <section id="case-studies">
           <div className="container mx-auto">
             <div className="mt-6 grid gap-5 lg:grid-cols-3">
               {testimonials.map((item) => (
@@ -212,122 +194,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <footer className=" bg-linear-to-b from-[#1f252d] to-[#181e25]">
-          <div className="container mx-auto">
-            <div className="grid gap-8 pb-8 pt-7 lg:grid-cols-5">
-              <div>
-                <div className="relative h-44 w-44 overflow-hidden rounded-md border border-zinc-600 bg-white p-1">
-                  <Image
-                    src="/images/logo.webp"
-                    alt="Atlas Pool Solutions logo"
-                    fill
-                    className="object-contain"
-                  />
-                </div>
-            
-              </div>
-
-              <div>
-                <h4 className="text-2xl font-medium text-[#dbe3e7]">Quick Links:</h4>
-                <ul className="mt-2 space-y-1 text-md font-normal text-[#cfd8dd]">
-                  {navItems.map((item) => (
-                    <li key={item}>
-                      <Link
-                        href={`#${item.toLowerCase().replace(" ", "-")}`}
-                        className="transition hover:text-[#e63946]"
-                      >
-                        {item}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div>
-                <h4 className="text-2xl font-medium text-[#dbe3e7]">Follow Us:</h4>
-                <div className="mt-3 flex gap-2">
-                  {[
-                    {
-                      Icon: Facebook,
-                      href: "https://www.facebook.com/atlaspoolsolutions",
-                      label: "Facebook",
-                    },
-                    {
-                      Icon: Instagram,
-                      href: "https://www.instagram.com/atlaspoolsolutions",
-                      label: "Instagram",
-                    },
-                    {
-                      Icon: Twitter,
-                      href: "https://x.com/atlaspoolsolutions",
-                      label: "X (Twitter)",
-                    },
-                  ].map(({ Icon, href, label }) => (
-                    <a
-                      key={label}
-                      href={href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={label}
-                      className="grid h-10 w-10 place-items-center rounded-full bg-[#e63946] text-[#ffffff] transition hover:brightness-110"
-                    >
-                      <Icon className="h-5 w-5" strokeWidth={2.25} />
-                    </a>
-                  ))}
-                </div>
-                <p className="mt-5 text-2xl font-medium text-[#dbe3e7]">Contact Us</p>
-               
-                <p className="mt-3 text-md text-[#cfd8dd]">showroom@atlaspoolsolutions.com</p>
-                <p className="mt-2 text-md text-[#cfd8dd]">310.341.6123</p>
-                <p className="mt-3 text-sm leading-6 text-[#cfd8dd]">
-                  For work orders for current clients, please contact us at
-                  Operations@atlaspoolsolutions.com at any time.
-                </p>
-              </div>
-
-              <div>
-                <h4 className="text-2xl font-medium text-[#dbe3e7]">Hours</h4>
-                <p className="mt-2 text-base leading-7 text-[#cfd8dd]">
-                  Mon - By Appointment
-                  <br />
-                  Tue - By Appointment
-                  <br />
-                  Wed - By Appointment
-                  <br />
-                  Thu - By Appointment
-                  <br />
-                  Fri - By Appointment
-                  <br />
-                  Sat - By Appointment
-                  <br />
-                  Sun - Closed
-                </p>
-                <p className="mt-3 text-sm leading-6 text-[#cfd8dd]">
-                  Monday - Friday: Appointment Only
-                  <br />
-                  Saturday: Appointment Only
-                  <br />
-                  Sunday: Closed
-                </p>
-              </div>
-              <div>
-                    <p className="mt-5 text-lg font-black uppercase text-[#dce3e7] sm:text-xl">
-                  Address:
-                </p>
-                <p className="mt-1 text-base leading-7 text-[#cfd8dd] sm:text-lg">
-                  Atlas Pool Solutions, Inc
-                  <br />
-                  3693 San Gabriel River Parkway,
-                  <br />
-                  Pico Rivera, California 90660, United States
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="border-t border-[#3f4b57] bg-[#131920] py-4 text-center text-sm font-semibold text-[#c7d1d6]">
-            &copy; {new Date().getFullYear()} Atlas Pool Solutions, Inc. - All Rights Reserved
-          </div>
-        </footer>
+        <SiteFooter />
       </div>
     </main>
   );

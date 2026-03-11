@@ -3,7 +3,8 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Atlas Pool Solutions",
-  description: "Next.js 16 + Tailwind CSS starter setup",
+  description:
+    "Commercial rooftop pool and spa renovations, water features, decks, and equipment modernization by Atlas Pool Solutions.",
 };
 
 export default function RootLayout({

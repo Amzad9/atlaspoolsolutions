@@ -1,7 +1,7 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
-import { addDays, format, parseISO, startOfToday } from "date-fns";
+import { addDays, format, parseISO, startOfToday, isToday } from "date-fns";
 import Image from "next/image";
 import type { InputHTMLAttributes, ReactNode } from "react";
 import { useEffect, useState, useTransition } from "react";
@@ -109,8 +109,26 @@ export default function ServiceBookingModal({
     };
   }, [isOpen]);
 
-  const morningSlots = bookingTimeSlots.filter((slot) => slot.includes("AM"));
-  const afternoonSlots = bookingTimeSlots.filter((slot) => slot.includes("PM"));
+  const currentDateTime = new Date();
+  const isSelectedDateToday = selectedDate && isToday(selectedDate);
+
+  const availableTimeSlots = bookingTimeSlots.filter((slot) => {
+    if (!isSelectedDateToday) return true;
+    
+    const [time, period] = slot.split(" ");
+    let [hours, minutes] = time.split(":").map(Number);
+    
+    if (period === "PM" && hours < 12) hours += 12;
+    if (period === "AM" && hours === 12) hours = 0;
+    
+    const slotTime = new Date();
+    slotTime.setHours(hours, minutes, 0, 0);
+    
+    return slotTime > currentDateTime;
+  });
+
+  const morningSlots = availableTimeSlots.filter((slot) => slot.includes("AM"));
+  const afternoonSlots = availableTimeSlots.filter((slot) => slot.includes("PM"));
 
   const summaryRows = [
     { label: "Service", value: watchedValues.serviceTitle },
@@ -379,7 +397,7 @@ function ScheduleStep({
         </p>
       </div>
 
-      <div className="mt-8 grid gap-6 xl:grid-cols-[0.95fr_1.05fr]">
+      <div className="mt-8 grid gap-6 xl:grid-cols-1">
         <div className="rounded-[24px] border border-[#495867] bg-[#0d1218] p-4 shadow-[0_18px_44px_rgba(0,0,0,0.35)] sm:p-6">
           <div className="mb-4 flex items-center gap-3">
             <CalendarDays className="h-5 w-5 text-[#9ec2cd]" strokeWidth={2.2} />

@@ -142,12 +142,12 @@ export default function AboutPage() {
                 ATLAS POOL SOLUTIONS CA #990127
               </p>
 
-              <h1 className="mt-5 text-5xl font-black uppercase leading-[0.9] text-[#f6fbfc] drop-shadow-[0_3px_6px_rgba(0,0,0,0.72)] sm:text-6xl lg:text-7xl">
+              <h2 className="mt-5 text-4xl font-black uppercase leading-[0.9] text-[#f6fbfc] drop-shadow-[0_3px_6px_rgba(0,0,0,0.72)] sm:text-6xl lg:text-6xl">
                 About
                 <br />
                 Atlas Pool Solutions
-              </h1>
-              <p className="mt-5 max-w-[42rem] text-base leading-7 text-[#d3dbe0] sm:text-lg sm:leading-8">
+              </h2>
+              <p className="mt-5 max-w-2xl text-base leading-7 text-[#d3dbe0] sm:text-lg sm:leading-8">
                 Specializing in rooftop pool and spa renovations for commercial properties—serving
                 Greater Los Angeles and Orange County.
               </p>

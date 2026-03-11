@@ -21,14 +21,14 @@ export default function ServicesBookingSection() {
                 key={service.id}
                 className="overflow-hidden rounded-[22px] border border-[#4f5f6d] bg-[#e8ecef] text-[#11161d] shadow-[0_16px_38px_rgba(0,0,0,0.35)] transition hover:-translate-y-1 hover:shadow-[0_22px_48px_rgba(0,0,0,0.42)]"
               >
-                <div className="relative h-72 border-b border-[#cfd7db]">
+                <div className="relative h-56 border-b border-[#cfd7db] sm:h-64 lg:h-72">
                   <Image src={service.image} alt={service.alt} fill className="object-cover" />
                 </div>
                 <div className="p-6 sm:p-7">
-                  <h2 className="min-h-20 text-2xl font-black uppercase leading-tight text-[#171b20] sm:text-3xl">
+                  <h2 className="min-h-0 text-2xl font-black uppercase leading-tight text-[#171b20] sm:min-h-20 sm:text-3xl">
                     {service.title}
                   </h2>
-                  <p className="mt-5 text-2xl leading-none text-[#171b20]">
+                  <p className="mt-5 text-xl leading-none text-[#171b20] sm:text-2xl">
                     {service.durationLabel}
                     <span className="px-3 text-[#5c646c]">|</span>
                     {service.priceLabel}
@@ -38,7 +38,7 @@ export default function ServicesBookingSection() {
                     <button
                       type="button"
                       onClick={() => setOpenServiceId(service.id)}
-                      className="inline-flex rounded-sm bg-[#6f8fa4] px-7 py-4 text-base font-black uppercase tracking-wide text-white transition hover:bg-[#7ca0b8]"
+                      className="inline-flex w-full justify-center rounded-sm bg-[#6f8fa4] px-7 py-4 text-base font-black uppercase tracking-wide text-white transition hover:bg-[#7ca0b8] sm:w-auto"
                     >
                       Book
                     </button>

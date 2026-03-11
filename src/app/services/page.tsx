@@ -126,8 +126,8 @@ export default function ServicesPage() {
                     existing website.
                   </p>
                   <p>
-                    The booking actions currently route visitors to the standalone `Contact` page so
-                    they can call, email, or visit the showroom to schedule.
+                    The booking actions now open a responsive multi-step scheduling flow so visitors
+                    can choose a date, pick a time, and submit project details in one place.
                   </p>
                   <p>
                     If you want, I can also connect each card to a dedicated booking URL or embed an

@@ -198,7 +198,7 @@ export default function ContactPage() {
                         {siteContact.businessHours.map((item) => (
                           <div
                             key={item}
-                            className="flex items-center justify-between gap-4 border-b border-white/8 pb-3 text-sm text-[#d4dde2] last:border-b-0 last:pb-0"
+                            className="flex flex-col gap-1 border-b border-white/8 pb-3 text-sm text-[#d4dde2] last:border-b-0 last:pb-0 sm:flex-row sm:items-center sm:justify-between sm:gap-4"
                           >
                             <span>{item.split(" - ")[0]}</span>
                             <span className="font-semibold uppercase tracking-[0.1em] text-[#c0ccd2]">
@@ -231,7 +231,7 @@ export default function ContactPage() {
                 </p>
               </div>
 
-              <div className="h-[420px] w-full">
+              <div className="h-[320px] w-full sm:h-[380px] lg:h-[420px]">
                 <iframe
                   title="Atlas Pool Solutions showroom map"
                   src="https://www.google.com/maps?q=3693%20San%20Gabriel%20River%20Parkway%2C%20Pico%20Rivera%2C%20California%2090660&z=15&output=embed"

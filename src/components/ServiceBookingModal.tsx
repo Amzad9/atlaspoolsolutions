@@ -211,9 +211,9 @@ export default function ServiceBookingModal({
   }
 
   return (
-    <div className="fixed inset-0 z-50 flex items-start justify-center overflow-y-auto bg-black/80 px-4 py-6 sm:px-6 sm:py-10">
-      <div className="w-full max-w-6xl overflow-hidden rounded-[28px] border border-[#43515d] bg-[#0b0f14] shadow-[0_28px_80px_rgba(0,0,0,0.6)]">
-        <div className="flex items-center justify-between border-b border-white/8 bg-[#6f8fa4] px-5 py-4 sm:px-7">
+    <div className="fixed inset-0 z-50 flex items-start justify-center overflow-y-auto bg-black/80 px-2 py-2 sm:px-4 sm:py-6 lg:px-6 lg:py-10">
+      <div className="w-full max-w-6xl overflow-hidden rounded-[22px] border border-[#43515d] bg-[#0b0f14] shadow-[0_28px_80px_rgba(0,0,0,0.6)] sm:rounded-[28px]">
+        <div className="flex items-center justify-between border-b border-white/8 bg-[#6f8fa4] px-4 py-4 sm:px-5 sm:py-4 lg:px-7">
           <div className="text-sm font-black uppercase tracking-[0.18em] text-white/95">
             Service Booking
           </div>
@@ -228,7 +228,7 @@ export default function ServiceBookingModal({
         </div>
 
         <div className="grid lg:grid-cols-[1.15fr_0.85fr]">
-          <div className="p-5 sm:p-7 lg:p-9">
+          <div className="p-4 sm:p-6 lg:p-9">
             <div className="mb-7 flex flex-wrap gap-3">
               {[
                 { step: 1, label: "Schedule" },
@@ -243,7 +243,7 @@ export default function ServiceBookingModal({
                   <div
                     key={item.step}
                     className={[
-                      "inline-flex items-center gap-2 rounded-full border px-4 py-2 text-xs font-black uppercase tracking-[0.16em]",
+                      "inline-flex items-center gap-2 rounded-full border px-3 py-2 text-[11px] font-black uppercase tracking-[0.16em] sm:px-4 sm:text-xs",
                       isActive
                         ? "border-[#6f8fa4] bg-[#6f8fa4]/20 text-white"
                         : isComplete
@@ -294,17 +294,17 @@ export default function ServiceBookingModal({
             ) : null}
           </div>
 
-          <aside className="border-t border-white/8 bg-[#e8ecef] p-5 text-[#12161b] lg:border-l lg:border-t-0 lg:p-8">
+          <aside className="border-t border-white/8 bg-[#e8ecef] p-4 text-[#12161b] sm:p-5 lg:border-l lg:border-t-0 lg:p-8">
             <div className="overflow-hidden rounded-[22px] border border-[#c5ced5] bg-white shadow-[0_16px_36px_rgba(0,0,0,0.12)]">
               <div className="grid gap-0 sm:grid-cols-[180px_1fr]">
-                <div className="relative h-48 sm:h-full">
+                <div className="relative h-40 sm:h-full">
                   <Image src={selectedService.image} alt={selectedService.alt} fill className="object-cover" />
                 </div>
-                <div className="p-5">
-                  <h2 className="text-2xl font-black uppercase leading-tight text-[#171b20] sm:text-3xl">
+                <div className="p-4 sm:p-5">
+                  <h2 className="text-xl font-black uppercase leading-tight text-[#171b20] sm:text-3xl">
                     {selectedService.title}
                   </h2>
-                  <p className="mt-4 text-xl text-[#171b20]">
+                  <p className="mt-4 text-lg text-[#171b20] sm:text-xl">
                     {selectedService.durationLabel}
                     <span className="px-3 text-[#6a727a]">|</span>
                     {selectedService.priceLabel}
@@ -404,16 +404,16 @@ function ScheduleStep({
               months: "flex justify-center",
               month: "w-full",
               month_caption:
-                "mb-6 flex items-center justify-between text-2xl font-black uppercase tracking-[0.08em]",
-              caption_label: "text-xl font-black text-[#f6fbfc] sm:text-2xl",
+                "mb-4 flex items-center justify-between text-lg font-black uppercase tracking-[0.08em] sm:mb-6 sm:text-2xl",
+              caption_label: "text-lg font-black text-[#f6fbfc] sm:text-2xl",
               nav: "flex items-center gap-2",
               button_previous:
-                "grid h-10 w-10 place-items-center rounded-full border border-white/15 bg-white/5 text-[#dfe8ec] transition hover:bg-white/10",
+                "grid h-9 w-9 place-items-center rounded-full border border-white/15 bg-white/5 text-[#dfe8ec] transition hover:bg-white/10 sm:h-10 sm:w-10",
               button_next:
-                "grid h-10 w-10 place-items-center rounded-full border border-white/15 bg-white/5 text-[#dfe8ec] transition hover:bg-white/10",
+                "grid h-9 w-9 place-items-center rounded-full border border-white/15 bg-white/5 text-[#dfe8ec] transition hover:bg-white/10 sm:h-10 sm:w-10",
               weekday:
-                "pb-4 text-base font-black uppercase tracking-[0.12em] text-[#e5edf1] sm:text-lg",
-              day: "h-12 w-12 rounded-full border border-transparent text-lg text-[#aeb7bd] transition hover:border-[#6f8fa4]/50 hover:text-white sm:h-14 sm:w-14 sm:text-2xl",
+                "pb-3 text-xs font-black uppercase tracking-[0.12em] text-[#e5edf1] sm:pb-4 sm:text-lg",
+              day: "h-9 w-9 rounded-full border border-transparent text-sm text-[#aeb7bd] transition hover:border-[#6f8fa4]/50 hover:text-white sm:h-12 sm:w-12 sm:text-lg lg:h-14 lg:w-14 lg:text-2xl",
               today: "text-[#f6fbfc]",
               selected:
                 "border-[#6f8fa4] bg-[#6f8fa4] text-white hover:border-[#6f8fa4] hover:bg-[#6f8fa4]",
@@ -473,7 +473,7 @@ function ScheduleStep({
         <button
           type="button"
           onClick={onContinue}
-          className="inline-flex items-center justify-center rounded-full border border-[#f06a74] bg-gradient-to-b from-[#ef4b57] to-[#c92d3a] px-7 py-3 text-sm font-black uppercase tracking-wide text-white shadow-[0_0_14px_rgba(230,57,70,0.4)] transition hover:brightness-105"
+          className="inline-flex w-full items-center justify-center rounded-full border border-[#f06a74] bg-gradient-to-b from-[#ef4b57] to-[#c92d3a] px-7 py-3 text-sm font-black uppercase tracking-wide text-white shadow-[0_0_14px_rgba(230,57,70,0.4)] transition hover:brightness-105 sm:w-auto"
         >
           Continue
         </button>
@@ -541,14 +541,14 @@ function DetailsStep({
         <button
           type="button"
           onClick={onBack}
-          className="inline-flex items-center justify-center rounded-full border border-white/18 bg-white/5 px-7 py-3 text-sm font-black uppercase tracking-wide text-[#e4edf1] transition hover:bg-white/10"
+          className="inline-flex w-full items-center justify-center rounded-full border border-white/18 bg-white/5 px-7 py-3 text-sm font-black uppercase tracking-wide text-[#e4edf1] transition hover:bg-white/10 sm:w-auto"
         >
           Back
         </button>
         <button
           type="button"
           onClick={onContinue}
-          className="inline-flex items-center justify-center rounded-full border border-[#f06a74] bg-gradient-to-b from-[#ef4b57] to-[#c92d3a] px-7 py-3 text-sm font-black uppercase tracking-wide text-white shadow-[0_0_14px_rgba(230,57,70,0.4)] transition hover:brightness-105"
+          className="inline-flex w-full items-center justify-center rounded-full border border-[#f06a74] bg-gradient-to-b from-[#ef4b57] to-[#c92d3a] px-7 py-3 text-sm font-black uppercase tracking-wide text-white shadow-[0_0_14px_rgba(230,57,70,0.4)] transition hover:brightness-105 sm:w-auto"
         >
           Continue
         </button>
@@ -689,7 +689,7 @@ function ProjectStep({
         <button
           type="button"
           onClick={onBack}
-          className="inline-flex items-center justify-center rounded-full border border-white/18 bg-white/5 px-7 py-3 text-sm font-black uppercase tracking-wide text-[#e4edf1] transition hover:bg-white/10"
+          className="inline-flex w-full items-center justify-center rounded-full border border-white/18 bg-white/5 px-7 py-3 text-sm font-black uppercase tracking-wide text-[#e4edf1] transition hover:bg-white/10 sm:w-auto"
         >
           Back
         </button>
@@ -697,7 +697,7 @@ function ProjectStep({
           type="button"
           onClick={onSubmit}
           disabled={isPending}
-          className="inline-flex items-center justify-center rounded-full border border-[#f06a74] bg-gradient-to-b from-[#ef4b57] to-[#c92d3a] px-7 py-3 text-sm font-black uppercase tracking-wide text-white shadow-[0_0_14px_rgba(230,57,70,0.4)] transition hover:brightness-105 disabled:cursor-not-allowed disabled:opacity-60"
+          className="inline-flex w-full items-center justify-center rounded-full border border-[#f06a74] bg-gradient-to-b from-[#ef4b57] to-[#c92d3a] px-7 py-3 text-sm font-black uppercase tracking-wide text-white shadow-[0_0_14px_rgba(230,57,70,0.4)] transition hover:brightness-105 disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
         >
           {isPending ? "Submitting..." : "Submit Booking"}
         </button>
@@ -746,7 +746,7 @@ function SuccessStep({
         <button
           type="button"
           onClick={onClose}
-          className="inline-flex items-center justify-center rounded-full border border-[#f06a74] bg-gradient-to-b from-[#ef4b57] to-[#c92d3a] px-7 py-3 text-sm font-black uppercase tracking-wide text-white shadow-[0_0_14px_rgba(230,57,70,0.4)] transition hover:brightness-105"
+          className="inline-flex w-full items-center justify-center rounded-full border border-[#f06a74] bg-gradient-to-b from-[#ef4b57] to-[#c92d3a] px-7 py-3 text-sm font-black uppercase tracking-wide text-white shadow-[0_0_14px_rgba(230,57,70,0.4)] transition hover:brightness-105 sm:w-auto"
         >
           Close
         </button>
@@ -768,8 +768,8 @@ function TimeSlotGroup({
 }) {
   return (
     <div>
-      <h3 className="text-2xl font-black text-[#f6fbfc]">{title}</h3>
-      <div className="mt-4 grid grid-cols-2 gap-3">
+      <h3 className="text-xl font-black text-[#f6fbfc] sm:text-2xl">{title}</h3>
+      <div className="mt-4 grid grid-cols-2 gap-2 sm:gap-3">
         {slots.map((slot) => {
           const isSelected = selectedSlot === slot;
 
@@ -779,7 +779,7 @@ function TimeSlotGroup({
               type="button"
               onClick={() => onSelect(slot)}
               className={[
-                "rounded-2xl border px-4 py-4 text-center text-lg font-medium transition sm:text-xl",
+                "rounded-2xl border px-3 py-3 text-center text-sm font-medium transition sm:px-4 sm:py-4 sm:text-xl",
                 isSelected
                   ? "border-[#6f8fa4] bg-[#6f8fa4] text-white"
                   : "border-[#496073] bg-transparent text-[#f4f8fa] hover:border-[#6f8fa4] hover:bg-[#6f8fa4]/10",

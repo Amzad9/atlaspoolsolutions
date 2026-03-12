@@ -27,16 +27,26 @@ export default function SiteHeader({ activeLabel }: { activeLabel?: string }) {
 
   return (
     <header className="relative rounded-t-md border-b border-[#3f4b57]/70 bg-[#1f252d]/95 px-4 py-4 sm:px-8">
-      <div className="container mx-auto flex items-center justify-between gap-5">
-        <Link href="/" className="flex items-center gap-4" aria-label="Atlas Pool Solutions">
+      <div className="container mx-auto flex items-center justify-between gap-4 lg:gap-5">
+        <Link
+          href="/"
+          className="flex min-w-0 flex-1 items-center gap-3 sm:gap-4"
+          aria-label="Atlas Pool Solutions"
+        >
           <div className="relative h-16 w-16 overflow-hidden rounded-sm border border-zinc-600 bg-white p-1 shadow-[0_0_18px_rgba(255,255,255,0.14)] sm:h-20 sm:w-20">
             <Image
-              src="/images/logo.webp"
+              src="/images/logo.png"
               alt="Atlas Pool Solutions logo"
               fill
               className="object-contain"
               priority
             />
+          </div>
+          <div className="min-w-0">
+            <h2 className="bg-linear-to-r from-[#15a8f5] via-[#18b1fb] to-[#0f8fd8] bg-clip-text font-black uppercase leading-[0.9] tracking-[-0.04em] text-transparent drop-shadow-[0_0_18px_rgba(21,168,245,0.18)] sm:text-2xl lg:text-[2.4rem] xl:text-[4.2rem]">
+              <span className="hidden sm:inline">Atlas Pool Solutions</span>
+            </h2>
+           
           </div>
         </Link>
 
@@ -50,8 +60,8 @@ export default function SiteHeader({ activeLabel }: { activeLabel?: string }) {
           <Menu className="h-5 w-5" strokeWidth={2.4} />
         </button>
 
-        <nav className="hidden sm:block sm:w-auto" aria-label="Primary navigation">
-          <ul className="flex flex-wrap justify-end gap-8 text-[15px] font-semibold text-[#d8dfe3]">
+        <nav className="hidden shrink-0 sm:block sm:w-auto" aria-label="Primary navigation">
+          <ul className="flex flex-wrap justify-end gap-5 text-[15px] font-semibold text-[#d8dfe3] lg:gap-8">
             {siteNav.map((item) => {
               const isActive = item.label === activeLabel;
               return (

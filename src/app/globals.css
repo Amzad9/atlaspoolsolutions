@@ -8,3 +8,17 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   text-rendering: geometricPrecision;
 }
+
+.gallery-swiper {
+  padding-bottom: 3.25rem;
+}
+
+.gallery-swiper .swiper-pagination-bullet {
+  background: #8fb7c9;
+  opacity: 0.45;
+}
+
+.gallery-swiper .swiper-pagination-bullet-active {
+  background: #18b1fb;
+  opacity: 1;
+}

@@ -213,17 +213,9 @@ export default function ServiceBookingModal({
         return;
       }
 
-      const notes: string[] = [];
-
-      if (!result.savedToDatabase) {
-        notes.push("Supabase is not configured yet, so this booking was captured in demo mode.");
-      }
-
-      if (!result.emailSent) {
-        notes.push("Resend is not configured yet, so no email was sent.");
-      }
-
-      setSuccessNote(notes.length > 0 ? notes.join(" ") : "Your booking was submitted successfully.");
+      setSuccessNote(
+        "Thank you. Your request has been submitted, and our team will follow up to confirm the appointment details.",
+      );
       setCurrentStep(4);
     });
   }
@@ -392,7 +384,7 @@ function ScheduleStep({
           Choose Your Date And Time
         </h1>
         <p className="mt-4 text-base leading-7 text-[#c9d4da] sm:text-lg sm:leading-8">
-          Select a booking date and one of the available time slots for{" "}
+          Select a preferred date and one of the available time slots for{" "}
           <span className="font-black text-[#f6fbfc]">{selectedService.title}</span>.
         </p>
       </div>
@@ -453,7 +445,8 @@ function ScheduleStep({
             <p className="mt-4 text-sm font-semibold text-[#f28b93]">{appointmentDateError}</p>
           ) : (
             <p className="mt-4 text-sm leading-6 text-[#9baab4]">
-              Book within the next 60 days. Need a special time? Call {siteContact.phone}.
+              Appointments are available within the next 60 days. For custom scheduling requests,
+              please call {siteContact.phone}.
             </p>
           )}
         </div>
@@ -519,7 +512,8 @@ function DetailsStep({
           Add Your Details
         </h1>
         <p className="mt-4 text-base leading-7 text-[#c9d4da] sm:text-lg sm:leading-8">
-          Share your contact information so Atlas Pool Solutions can confirm the appointment.
+          Please provide your contact information so our team can confirm the appointment and follow
+          up if additional details are needed.
         </p>
       </div>
 
@@ -600,8 +594,8 @@ function ProjectStep({
           Project And Location Details
         </h1>
         <p className="mt-4 text-base leading-7 text-[#c9d4da] sm:text-lg sm:leading-8">
-          Confirm whether this booking is for your property or the showroom, then add the project
-          details Atlas should know before the appointment.
+          Confirm whether the appointment will take place at your property or in our showroom, then
+          share the project details our team should review in advance.
         </p>
       </div>
 
@@ -626,8 +620,8 @@ function ProjectStep({
                 Your Location
               </span>
               <span className="mt-2 block text-sm leading-6 text-[#aeb9c2]">
-                Atlas visits the project address for onsite consultations, deck work, renovation
-                reviews, and equipment assessments.
+                Atlas can meet at the project site for consultations, renovation reviews, deck
+                discussions, and equipment assessments.
               </span>
             </span>
           </label>
@@ -644,8 +638,8 @@ function ProjectStep({
                 Showroom
               </span>
               <span className="mt-2 block text-sm leading-6 text-[#aeb9c2]">
-                Meet at Atlas Pool Solutions, Inc, 3693 San Gabriel River Parkway, Pico Rivera,
-                California 90660.
+                Meet with the Atlas Pool Solutions team at our showroom in Pico Rivera to review
+                finishes, ideas, and project priorities.
               </span>
             </span>
           </label>
@@ -681,7 +675,7 @@ function ProjectStep({
           </div>
         ) : (
           <div className="mt-6 rounded-2xl border border-white/10 bg-black/10 p-4 text-base leading-7 text-[#d4dde2]">
-            Your appointment will be scheduled at the Atlas showroom.
+            Your appointment will be scheduled at the Atlas Pool Solutions showroom.
           </div>
         )}
 
@@ -693,7 +687,7 @@ function ProjectStep({
               <textarea
                 {...form.register("projectDetails")}
                 rows={5}
-                placeholder="Tell us about the pool, spa, deck, water features, equipment, property type, and anything Atlas should prepare for."
+                placeholder="Tell us about the pool, spa, deck, water features, equipment, property type, and any details our team should review before the appointment."
                 className="w-full rounded-2xl border border-[#425261] bg-[#0a1015] px-4 py-3 text-base text-[#f2f7f9] outline-none transition placeholder:text-[#738190] focus:border-[#6f8fa4]"
               />
             }
@@ -746,7 +740,7 @@ function SuccessStep({
       <p className="mt-4 text-base leading-7 text-[#c9d4da] sm:text-lg sm:leading-8">
         Your request for <span className="font-black text-[#f6fbfc]">{values.serviceTitle}</span>{" "}
         on {format(parseISO(values.appointmentDate), "MMMM d, yyyy")} at {values.appointmentTime} has
-        been received.
+        been received successfully.
       </p>
       {successNote ? <p className="mt-4 text-sm leading-6 text-[#9ec2cd]">{successNote}</p> : null}
 
@@ -755,8 +749,8 @@ function SuccessStep({
           Next Step
         </p>
         <p className="mt-3 text-base leading-7 text-[#d4dde2]">
-          Atlas Pool Solutions will review the details and follow up using {values.email} or{" "}
-          {values.phone}. For urgent needs, call {siteContact.phone}.
+          Atlas Pool Solutions will review the information provided and follow up using {values.email}{" "}
+          or {values.phone}. For urgent inquiries, please call {siteContact.phone}.
         </p>
       </div>
 

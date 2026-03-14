@@ -17,44 +17,44 @@ const featuredStudies = [
   {
     title: "Commercial Pool Renovations",
     summary:
-      "From minor to major renovations, Atlas Pool Solutions helps commercial properties modernize rooftop pools and spas with a renovation vision that fits the budget.",
+      "Atlas Pool Solutions helps commercial properties renew aging pools and spas with thoughtful upgrades that improve appearance, usability, and operational performance.",
     image: "/images/expert-comercial-pool.png",
     alt: "Commercial pool renovation planning board",
     icon: <Waves className="h-5 w-5" strokeWidth={2.2} />,
     challenge:
-      "Properties often need to refresh aging rooftop pool amenities while balancing appearance, performance, and long-term operating costs.",
+      "Many properties need to refresh aging amenities while balancing resident expectations, downtime, capital planning, and long-term operating costs.",
     approach:
-      "We provide consulting appointments to define the best renovation vision, then guide finish selections, technology upgrades, and construction planning for projects of every size.",
+      "We begin with a consultation to define project priorities, then guide finish selections, system improvements, and renovation planning with budget and lifecycle performance in mind.",
     result:
-      "The outcome is a beautiful, energy-efficient smart pool environment that can completely change the look of the amenity.",
+      "The result is a more polished, efficient, and competitive amenity space that supports both daily use and long-term asset value.",
   },
   {
     title: "Water Features And Deck Upgrades",
     summary:
-      "Decks, fountains, waterfalls, and custom water features are reworked to elevate the full poolside experience with finishes that match the property.",
+      "Decks, fountains, waterfalls, and water features are updated to create a more cohesive and elevated poolside experience.",
     image: "/images/clean_features.png",
     alt: "Modern rooftop pool deck and water feature",
     icon: <Sparkles className="h-5 w-5" strokeWidth={2.2} />,
     challenge:
-      "Amenity areas can feel dated even when the vessel is structurally sound, especially when decks and surrounding water features no longer support the design vision.",
+      "Amenity areas can feel outdated even when the core structure remains sound, especially when surrounding features no longer reflect the property standard.",
     approach:
-      "Atlas renovates decks, fountains, waterfalls, and other flowing-water features while helping clients compare ceramic, glass tile, fiberglass, pebble, and related finish options.",
+      "Atlas evaluates each surrounding element as part of the overall experience, helping clients compare finish materials and upgrade paths that align with the property aesthetic.",
     result:
-      "These upgrades improve deck appearance, upgrade the poolside experience, and create a sharper visual identity for residents and guests.",
+      "These improvements strengthen visual appeal, support day-to-day use, and create a stronger first impression for residents, guests, and stakeholders.",
   },
   {
     title: "Maintenance And Equipment Modernization",
     summary:
-      "Commercial maintenance plans and modern equipment systems are designed to keep water clean, clear, healthy, and efficient year-round.",
+      "Maintenance strategies and equipment modernization are designed to improve water quality, reliability, and operating efficiency throughout the year.",
     image: "/images/advanced.png",
     alt: "Commercial pool equipment systems and maintenance area",
     icon: <Settings2 className="h-5 w-5" strokeWidth={2.2} />,
     challenge:
-      "Commercial operators need reliable circulation, filtration, and water quality support without losing sight of efficiency or ease of ownership.",
+      "Commercial operators need dependable circulation, filtration, and water quality performance without adding unnecessary complexity or avoidable cost.",
     approach:
-      "We design complete commercial equipment systems with the latest technologies and offer maintenance plans built around optimal circulation, filtration, and energy conservation.",
+      "We review existing conditions, recommend practical upgrades, and design equipment solutions that support strong circulation, cleaner water, and better energy performance.",
     result:
-      "The result is cleaner water, stronger equipment performance, and a pool environment that is easier to maintain throughout the year.",
+      "The outcome is a more stable operating environment with improved clarity, more dependable equipment performance, and easier long-term maintenance.",
   },
 ];
 
@@ -86,9 +86,9 @@ export default function CaseStudiesPage() {
                 Built Around Better Amenities
               </h2>
               <p className="mt-5 max-w-[44rem] text-base leading-7 text-[#d3dbe0] sm:text-lg sm:leading-8">
-                The live Atlas Pool Solutions site highlights the renovation, deck, water feature,
-                and equipment work that transforms commercial pool amenities. These featured project
-                stories organize that same content into a cleaner case study format.
+                These case studies highlight the types of renovation, deck, water feature, and
+                equipment projects Atlas Pool Solutions delivers for commercial properties seeking
+                stronger performance and a more refined amenity experience.
               </p>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
@@ -136,8 +136,8 @@ export default function CaseStudiesPage() {
                 Featured Renovation Stories
               </h2>
               <p className="mt-4 text-base leading-7 text-[#c9d4da] sm:text-lg sm:leading-8">
-                Each study below is built directly from the service and gallery messaging published
-                on the current Atlas Pool Solutions website.
+                Each example reflects the way Atlas approaches renovation planning, client
+                consultation, and amenity improvement across commercial pool environments.
               </p>
             </div>
 
@@ -205,9 +205,9 @@ export default function CaseStudiesPage() {
                   Ready To Discuss Your Pool Or Spa Project?
                 </h2>
                 <p className="mt-4 max-w-3xl text-base leading-7 text-[#c9d4da] sm:text-lg sm:leading-8">
-                  Atlas Pool Solutions serves commercial properties across Greater Los Angeles and
-                  Orange County. Make an appointment in the showroom and start shaping the best
-                  renovation vision for your property.
+                  Atlas Pool Solutions partners with commercial clients throughout Greater Los
+                  Angeles and Orange County. Schedule a consultation to discuss scope, priorities,
+                  finishes, and the right next step for your property.
                 </p>
 
                 <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">

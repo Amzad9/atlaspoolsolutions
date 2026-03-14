@@ -46,7 +46,7 @@ export default function ServicesBookingSection() {
                       href="/contact"
                       className="text-sm font-black uppercase tracking-[0.14em] text-[#6f8fa4] transition hover:text-[#56778d]"
                     >
-                      Need help?
+                      Need assistance?
                     </Link>
                   </div>
                 </div>

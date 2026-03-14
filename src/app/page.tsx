@@ -3,27 +3,28 @@ import Image from "next/image";
 import Link from "next/link";
 import { Star } from "lucide-react";
 
+import GallerySection from "../components/GallerySection";
 import SiteFooter from "../components/SiteFooter";
 import SiteHeader from "../components/SiteHeader";
 
 const serviceCards = [
   {
     title: "Commercial Pool Renovations",
-    body: "From minor to major renovations, we modernize commercial pools and spas with energy-efficient upgrades.",
+    body: "We renovate commercial pools and spas with durable finishes, updated systems, and practical improvements that support long-term performance.",
     image: "/images/expert-comercial-pool.png",
     alt: "Commercial pool design planning board and draft layout",
     icon: <PoolPlanIcon />,
   },
   {
     title: "Water Features And Decks",
-    body: "We renovate decks, fountains, waterfalls, and custom water features to transform amenity experiences.",
-    image: "/images/primium-pool.png",
+    body: "From decks and fountains to waterfalls and feature upgrades, we help reshape amenity spaces into polished, inviting environments.",
+    image: "/rs=w_1280,h_850.webp",
     alt: "Pool renovation visual with swimmer and blue water",
     icon: <RenovationIcon />,
   },
   {
     title: "Maintenance And Equipment",
-    body: "Commercial maintenance plans and modern equipment systems keep water clean, clear, and efficient year-round.",
+    body: "Our maintenance planning and equipment upgrades improve circulation, water quality, reliability, and day-to-day operating efficiency.",
     image: "/images/advanced.png",
     alt: "Commercial pool equipment room and maintenance infrastructure",
     icon: <GearIcon />,
@@ -32,23 +33,23 @@ const serviceCards = [
 
 const testimonials = [
   {
-    name: "Sarah J.",
+    name: "Property Manager",
     message:
-      "They improved our rooftop pool and deck appearance and guided each finish with clear renovation recommendations.",
+      "Atlas helped us modernize an aging rooftop amenity with a clear renovation plan, practical finish recommendations, and strong communication throughout the process.",
     image: "/images/test1.png",
     alt: "Portrait of Sarah testimonial client",
   },
   {
-    name: "Michael B.",
+    name: "Operations Team",
     message:
-      "Their team designed complete commercial equipment systems with newer technologies and practical budget planning.",
+      "Their team approached equipment upgrades with a strong understanding of performance, budget, and long-term maintenance requirements.",
     image: "/images/test2.png",
     alt: "Portrait of Michael testimonial client",
   },
   {
-    name: "David L.",
+    name: "Hospitality Client",
     message:
-      "From consultation through execution, they delivered an upgraded amenity with cleaner flow and better efficiency.",
+      "From initial consultation to project delivery, Atlas brought structure, professionalism, and a finished result that elevated the entire amenity.",
     image: "/images/test3.png",
     alt: "Portrait of David testimonial client",
   },
@@ -68,19 +69,22 @@ export default function Home() {
           <div className="container mx-auto">
             <div className="pointer-events-none absolute left-1/2 top-0 h-full w-full -translate-x-1/2 bg-[radial-gradient(circle_at_38%_28%,rgba(0,0,0,0.84)_0%,rgba(0,0,0,0.78)_28%,rgba(0,0,0,0.0)_62%)]" />
             <div className="relative z-10 max-w-5xl">
-              <h1 className="max-w-5xl text-3xl font-black uppercase leading-[0.95] text-[#f6fbfc] drop-shadow-[0_3px_4px_rgba(0,0,0,0.85)] sm:text-5xl lg:text-6xl">
-                Atlas Pool Solutions.
+              <h1 className="max-w-5xl uppercase text-3xl font-black leading-[0.95] text-[#f6fbfc] drop-shadow-[0_3px_4px_rgba(0,0,0,0.85)] sm:text-5xl lg:text-6xl">
+                <span className="text-2xl font-bold normal-case sm:text-3xl lg:text-4xl">
+                  Atlas Pool Solutions
+                </span>
                 <br />
                 Rooftop Pool And Spa Renovations
               </h1>
               <p className="mt-4 max-w-175 text-base leading-7 text-[#d3dbe0] sm:text-lg sm:leading-8">
-                Specializing in rooftop pool and spa renovations for commercial properties across
-                Greater Los Angeles and Orange County.
+                Atlas Pool Solutions specializes in commercial rooftop pool and spa renovations for
+                properties across Greater Los Angeles and Orange County, with a focus on appearance,
+                efficiency, and long-term value.
               </p>
               <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
                 <Link
                   href="/contact"
-                  className="w-full rounded-full border border-[#f06a74] bg-gradient-to-b from-[#ef4b57] to-[#c92d3a] px-6 py-3 text-center text-sm font-black uppercase tracking-wide text-[#fdfcfc] shadow-[0_0_16px_rgba(230,57,70,0.45)] transition hover:brightness-105 sm:w-auto sm:px-8 sm:text-base"
+                  className="w-full rounded-full border border-[#f06a74] bg-linear-to-b from-[#ef4b57] to-[#c92d3a] px-6 py-3 text-center text-sm font-black uppercase tracking-wide text-[#fdfcfc] shadow-[0_0_16px_rgba(230,57,70,0.45)] transition hover:brightness-105 sm:w-auto sm:px-8 sm:text-base"
                 >
                   Schedule A Pool Consultation
                 </Link>
@@ -91,7 +95,7 @@ export default function Home() {
               {serviceCards.map((card) => (
                 <article
                   key={card.title}
-                  className="rounded-2xl border border-[#4f5f6d] bg-gradient-to-b from-[#2a3139]/95 to-[#20272f]/95 p-3 shadow-[0_12px_26px_rgba(0,0,0,0.35)]"
+                  className="rounded-2xl border border-[#4f5f6d] bg-linear-to-b from-[#2a3139]/95 to-[#20272f]/95 p-3 shadow-[0_12px_26px_rgba(0,0,0,0.35)]"
                 >
                   <div className="relative h-44 overflow-hidden rounded-xl border border-white/20">
                     <Image src={card.image} alt={card.alt} fill className="object-cover" />
@@ -124,15 +128,15 @@ export default function Home() {
               </div>
               <div className="flex flex-col justify-center px-1 py-1 sm:px-2 sm:py-2 lg:col-span-5">
                 <h2 className="text-3xl font-black leading-[0.95] text-[#f0f7f8] sm:text-4xl lg:text-5xl">
-                  Unleash Your Imagination
+                  Strategic Upgrades For High-Use Amenities
                 </h2>
                 <p className="mt-4 text-base leading-7 text-[#c9d4da] sm:text-lg sm:leading-8 lg:text-2xl">
-                  We install modern technologies for optimal efficiency, cleaner water systems, and
-                  upgraded commercial amenity performance.
+                  We combine finish upgrades, system improvements, and practical planning to create
+                  cleaner, more efficient, and more compelling commercial pool environments.
                 </p>
                 <Link
                   href="/case-studies"
-                  className="mt-6 w-full rounded-full border border-[#f06a74] bg-gradient-to-b from-[#ef4b57] to-[#c92d3a] px-6 py-3 text-center text-base font-black uppercase tracking-wide text-[#ffffff] shadow-[0_0_14px_rgba(230,57,70,0.4)] sm:w-fit sm:px-10 sm:text-lg"
+                  className="mt-6 w-full rounded-full border border-[#f06a74] bg-linear-to-b from-[#ef4b57] to-[#c92d3a] px-6 py-3 text-center text-base font-black uppercase tracking-wide text-[#ffffff] shadow-[0_0_14px_rgba(230,57,70,0.4)] sm:w-fit sm:px-10 sm:text-lg"
                 >
                   Explore Case Studies
                 </Link>
@@ -140,6 +144,8 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+
         <section id="case-studies">
           <div className="container mx-auto">
             <div className="mt-6 grid gap-5 lg:grid-cols-3">
@@ -184,11 +190,11 @@ export default function Home() {
               </div>
               <div id="contact">
                 <h3 className="text-2xl font-semibold text-[#f0f7f8] sm:text-3xl lg:text-4xl">
-                  Atlas Pool Solutions
+                  Built For Commercial Properties
                 </h3>
                 <p className="mt-1 max-w-4xl text-base leading-7 text-[#cfd8dd] sm:text-lg sm:leading-8 lg:text-2xl">
-                  We stay current with the latest industry advances, so your project can become a
-                  beautiful, energy-efficient smart pool environment.
+                  We help owners and managers improve pool, spa, and deck amenities with renovation
+                  solutions that balance presentation, performance, and operational efficiency.
                 </p>
               </div>
             </div>

@@ -15,21 +15,21 @@ export const metadata: Metadata = {
 const contactOptions = [
   {
     title: "Call Or Text",
-    body: "Reach Atlas Pool Solutions directly to talk through your renovation goals, scheduling, and showroom availability.",
+    body: "Speak directly with Atlas Pool Solutions about renovation goals, appointment scheduling, and showroom availability.",
     value: siteContact.phone,
     href: siteContact.phoneHref,
     icon: <Phone className="h-5 w-5" strokeWidth={2.2} />,
   },
   {
     title: "Showroom Email",
-    body: "Use the showroom email for consultations, renovation planning, and appointment coordination.",
+    body: "Use the showroom email for consultation requests, renovation planning, and appointment coordination.",
     value: siteContact.emailShowroom,
     href: `mailto:${siteContact.emailShowroom}`,
     icon: <Mail className="h-5 w-5" strokeWidth={2.2} />,
   },
   {
     title: "Operations Support",
-    body: "For work orders for current clients, please contact operations at any time.",
+    body: "Current clients can use operations support for work orders, service coordination, and ongoing project communication.",
     value: siteContact.emailOperations,
     href: `mailto:${siteContact.emailOperations}`,
     icon: <ShieldCheck className="h-5 w-5" strokeWidth={2.2} />,
@@ -37,9 +37,9 @@ const contactOptions = [
 ];
 
 const visitReasons = [
-  "Review renovation ideas that fit your budget",
-  "Discuss decks, fountains, waterfalls, and water features",
-  "Plan modern equipment systems for better efficiency",
+  "Review renovation priorities and budget considerations",
+  "Discuss decks, fountains, waterfalls, and water feature upgrades",
+  "Evaluate equipment improvements for cleaner, more efficient operation",
 ];
 
 export default function ContactPage() {
@@ -63,9 +63,9 @@ export default function ContactPage() {
                 Call, Text, Or Visit Us
               </h2>
               <p className="mt-5 max-w-176 text-base leading-7 text-[#d3dbe0] sm:text-lg sm:leading-8">
-                We love renovations, so feel free to make an appointment in our showroom during our
-                normal business hours. Atlas Pool Solutions serves commercial properties throughout
-                Greater Los Angeles and Orange County.
+                Schedule a consultation with Atlas Pool Solutions to discuss renovations, equipment
+                upgrades, deck improvements, and long-term planning for your commercial pool or spa
+                amenity.
               </p>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
@@ -119,12 +119,12 @@ export default function ContactPage() {
                   Showroom Appointment
                 </p>
                 <h2 className="mt-3 text-3xl font-black leading-[0.95] text-[#f0f7f8] sm:text-4xl lg:text-5xl">
-                  Plan The Best Renovation Vision For Your Property
+                  Start With A Clear Project Conversation
                 </h2>
                 <p className="mt-4 max-w-3xl text-base leading-7 text-[#c9d4da] sm:text-lg sm:leading-8">
-                  The live site emphasizes consulting appointments that help shape the right
-                  renovation vision for your budget. Use the showroom to compare finishes, discuss
-                  water feature ideas, and review technology upgrades for your amenity.
+                  Our showroom consultations are designed to help clients define priorities, compare
+                  materials, evaluate improvement options, and move forward with greater clarity and
+                  confidence.
                 </p>
 
                 <div className="mt-7 grid gap-3">
@@ -226,8 +226,8 @@ export default function ContactPage() {
                   Visit Our Showroom
                 </h2>
                 <p className="max-w-3xl text-base leading-7 text-[#c9d4da] sm:text-lg sm:leading-8">
-                  Find Atlas Pool Solutions in Pico Rivera and use the map below for directions to
-                  the showroom.
+                  Visit Atlas Pool Solutions in Pico Rivera for showroom consultations and project
+                  planning meetings.
                 </p>
               </div>
 

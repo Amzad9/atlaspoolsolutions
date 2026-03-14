@@ -5,15 +5,16 @@ export type SiteNavItem = {
 
 export const siteNav: SiteNavItem[] = [
   { label: "Home", href: "/" },
-  { label: "Services", href: "/services" },
-  { label: "Case Studies", href: "/case-studies" },
   { label: "About", href: "/about" },
+  { label: "Services", href: "/services" },
+  { label: "Gallery", href: "/gallery" },
+  { label: "Case Studies", href: "/case-studies" },
   { label: "Contact", href: "/contact" },
 ];
 
 export const siteContact = {
   emailShowroom: "showroom@atlaspoolsolutions.com",
-  emailOperations: "Operations@atlaspoolsolutions.com",
+  emailOperations: "operations@atlaspoolsolutions.com",
   phone: "310.341.6123",
   phoneHref: "tel:13103416123",
   addressLines: [
@@ -24,12 +25,12 @@ export const siteContact = {
   directionsHref:
     "https://www.google.com/maps/search/?api=1&query=3693+San+Gabriel+River+Parkway+Pico+Rivera+California+90660",
   businessHours: [
-    "Monday - By Appointment",
-    "Tuesday - By Appointment",
-    "Wednesday - By Appointment",
-    "Thursday - By Appointment",
-    "Friday - By Appointment",
-    "Saturday - By Appointment",
+    "Monday - 9:00am to 5:00pm",
+    "Tuesday - 9:00am to 5:00pm",
+    "Wednesday - 9:00am to 5:00pm",
+    "Thursday - 9:00am to 5:00pm",
+    "Friday - 9:00am to 5:00pm",
+    "Saturday - Closed",
     "Sunday - Closed",
   ],
   socials: [

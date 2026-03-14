@@ -70,7 +70,7 @@ export default function Home() {
             <div className="pointer-events-none absolute left-1/2 top-0 h-full w-full -translate-x-1/2 bg-[radial-gradient(circle_at_38%_28%,rgba(0,0,0,0.84)_0%,rgba(0,0,0,0.78)_28%,rgba(0,0,0,0.0)_62%)]" />
             <div className="relative z-10 max-w-5xl">
               <h1 className="max-w-5xl uppercase text-3xl font-black leading-[0.95] text-[#f6fbfc] drop-shadow-[0_3px_4px_rgba(0,0,0,0.85)] sm:text-5xl lg:text-6xl">
-                <span className="text-2xl font-bold normal-case sm:text-3xl lg:text-4xl">
+                <span className="text-2xl font-bold normal-case sm:text-3xl lg:text-4xl text-[#18a8f5]">
                   Atlas Pool Solutions
                 </span>
                 <br />

@@ -18,7 +18,7 @@ const serviceCards = [
   {
     title: "Water Features And Decks",
     body: "From decks and fountains to waterfalls and feature upgrades, we help reshape amenity spaces into polished, inviting environments.",
-    image: "/rs=w_1280,h_850.webp",
+    image: "/images/water.png",
     alt: "Pool renovation visual with swimmer and blue water",
     icon: <RenovationIcon />,
   },

@@ -15,17 +15,17 @@ export const metadata: Metadata = {
 const aboutCards = [
   {
     title: "What We Do",
-    body: "We serve the Greater Los Angeles area and Orange County, from small spas to Olympic swimming pools. Our passion is renovating and implementing modern technologies to achieve optimal energy efficiency. We provide consulting appointments to set the best renovation vision that fits your budget. We also renovate Decks, Fountains, Waterfalls, Water Features, and anything which requires water flow.",
+    body: "Atlas Pool Solutions serves Greater Los Angeles and Orange County with renovation planning and construction support for commercial pools, spas, decks, fountains, waterfalls, and water features.",
     icon: <CompassIcon />,
   },
   {
     title: "Why We Do It",
-    body: "Let us improve your pool and spa or deck appearance, and upgrade your poolside experience. From glossy ceramic to glass tile or fiberglass to pebble finishes. We are up to date with the latest advances in our industry, so we can guide you to a beautiful energy efficient smart pool. Pool and Spa renovations can captivate and completely change the look of your Amenity.",
+    body: "Well-executed renovations improve more than appearance. They strengthen the overall amenity experience, modernize performance, and help properties present a more valuable, better maintained environment.",
     icon: <SparkIcon />,
   },
   {
     title: "Why Choose Us",
-    body: "Affordability is our greatest strength and we can try to work with any budget. Our infinite renovation ideas will adapt to various settings. We design complete commercial equipment systems with the latest technologies. From minor to major renovations, there is no project too big or small.",
+    body: "We combine practical project guidance, finish expertise, and equipment knowledge to help clients move from concept to execution with a scope that fits their operational goals and budget.",
     icon: <ShieldIcon />,
   },
 ];
@@ -33,31 +33,31 @@ const aboutCards = [
 const differenceCards = [
   {
     title: "Fiberglass Pools",
-    body: "Our fiberglass pool conversions are low-maintenance, durable, and available in any size and shapes to fit any project.",
-    image: "/images/primium-pool.png",
+    body: "Fiberglass solutions offer a durable, low-maintenance option for properties seeking reliable performance and a streamlined finish approach.",
+    image: "/rs=w_1280,h_850.webp",
     alt: "Pool water and deck finish example",
   },
   {
     title: "Concrete Pools",
-    body: "Our concrete pools are fully customizable and built to last, with a range of design options to fit any style and budget.",
+    body: "Concrete pool solutions support flexible layouts, custom detailing, and long-term durability across a wide range of commercial applications.",
     image: "/images/expert-comercial-pool.png",
     alt: "Pool design planning and drafting board",
   },
   {
     title: "Pool Renovations",
-    body: "Whether you're looking to upgrade your pool's features or completely remodel your buildings amenity or backyard, we bring your vision to life.",
+    body: "From targeted upgrades to full amenity repositioning, our renovation work is built to improve both presentation and performance.",
     image: "/images/advanced.png",
     alt: "Commercial pool equipment and modernization",
   },
   {
     title: "Pool Financing",
-    body: "We offer a variety of financing options to help make your dream pool a reality, with flexible terms and competitive rates. Please contact us for further information.",
+    body: "For projects requiring additional planning support, our team can discuss options and next steps during the consultation process.",
     image: "/images/clean_features.png",
     alt: "Luxury rooftop pool amenity space",
   },
   {
     title: "Pool Maintenance Plans",
-    body: "Our commercial pool and spa maintenance plans ensure that your pool stays clean, clear, and healthy year-round—so you or your residents can enjoy it without worrying about upkeep.",
+    body: "Maintenance planning helps keep pools and spas clean, consistent, and ready for daily use while reducing avoidable operational issues.",
     image: "/images/hero2.png",
     alt: "Rooftop pool and spa setting",
   },
@@ -66,63 +66,63 @@ const differenceCards = [
 const processSteps = [
   {
     title: "Step 1: Project Design and Approval",
-    body: "The first step is an initial meeting with a trained design consultant to learn what you want in the overall pool design. A detailed survey follows (dimensions, setbacks, utilities, accessibility). Within about a week, we prepare a plan and proposed construction cost for you to review.",
+    body: "We begin with an initial meeting to understand the project goals, design priorities, and operational needs. A detailed site review follows, and a preliminary plan with budget guidance is prepared for review.",
   },
   {
     title: "Step 2: Permitting and Engineering",
-    body: "We acquire the permit for pool and decking construction and coordinate required inspections (footer, plumbing, electrical bonding). All plans comply with local and state codes and we call 811 before construction to locate utility lines.",
+    body: "We coordinate permitting, engineering, and required inspections while ensuring the project aligns with local and state code requirements before construction begins.",
   },
   {
     title: "Step 3: Layout",
-    body: "After plan approval and permits, our construction department meets onsite to review stages and set form boards carefully to ensure correct pool placement.",
+    body: "After approvals are in place, the construction team reviews the site layout and establishes project positioning to confirm accurate placement and staging.",
   },
   {
     title: "Step 4: Excavation",
-    body: "Once forms are set, excavation begins.",
+    body: "Once layout is confirmed, excavation begins in preparation for structural work.",
   },
   {
     title: "Step 5: Structural Steel",
-    body: "The pool shell is reinforced with Grade 60 #3 steel rebar placed horizontally and vertically by hand, followed by a steel and ground inspection.",
+    body: "The shell is reinforced with structural steel according to engineering requirements, followed by the appropriate inspection process.",
   },
   {
     title: "Step 6: Rough Plumb",
-    body: "Rough plumbing (“stub out”) follows steel installation: main drains, skimmers, light niches, return line stubs, and pre-plumbing of raised spas.",
+    body: "Rough plumbing follows steel installation, including drains, skimmers, returns, light niches, and any required pre-plumbing for attached features.",
   },
   {
     title: "Step 7: Gunite",
-    body: "The pool floor uses concrete and the walls use a sand-and-cement gunite mix applied through a hose with pressurized air to achieve 4000 psi compressive strength.",
+    body: "The shell is formed using the appropriate structural concrete application to create the pool floor, walls, and core vessel shape.",
   },
   {
     title: "Step 8: Plumbing",
-    body: "Plumbing is designed specifically for strong circulation and filtration. We perform hydraulic calculations to size equipment and piping for water clarity and energy conservation.",
+    body: "The circulation and plumbing system is designed to support effective filtration, dependable performance, and efficient long-term operation.",
   },
   {
     title: "Step 9: Tile",
-    body: "After gunite, tile is installed. We offer a selection of hundreds of tiles to match colors, textures, and materials for your project.",
+    body: "Tile selections are installed to align with the design direction, material palette, and visual character of the finished amenity.",
   },
   {
     title: "Step 10: Equipment Set",
-    body: "An experienced plumber sets filtration equipment, including water feature pumps and optional equipment.",
+    body: "Filtration equipment, pumps, and related components are set in place to support the required circulation and feature systems.",
   },
   {
     title: "Step 11: Electric",
-    body: "Electrical conduits for lights and equipment power are run and the breaker box is installed at the equipment location. Gas lines to pool heaters are also run as needed.",
+    body: "Electrical work is coordinated for lighting, controls, and equipment power, with gas service routed where heating systems are required.",
   },
   {
     title: "Step 12: Deck",
-    body: "Decking and coping reflect your project theme (color, pattern, design). We offer hundreds of options and this stage brings the project close to the finish line.",
+    body: "Decking and coping are completed to support the design concept, material selection, and overall finish quality of the project.",
   },
   {
     title: "Step 13: Site Clean Up",
-    body: "We remove extraneous construction materials and waste and prepare the pool interior for finishing.",
+    body: "The site is cleared of excess materials and prepared for the final finish stages.",
   },
   {
     title: "Step 14: Pool Interior",
-    body: "The interior is coated in your chosen finish. Different finishes change the look and mood of the water. After coating, we begin filling the pool—this is the final stage of construction.",
+    body: "The interior finish is applied based on the selected material, giving the water its final appearance and preparing the vessel for startup.",
   },
   {
     title: "Step 15: Fire Up and Orientation",
-    body: "Once full, a service tech checks the installation, starts equipment, and schedules a walkthrough for maintenance operations, troubleshooting tips, and ongoing support.",
+    body: "After startup, the system is reviewed, equipment is commissioned, and a final orientation is provided to support operations, maintenance, and ongoing use.",
   },
 ];
 
@@ -148,8 +148,8 @@ export default function AboutPage() {
                 Atlas Pool Solutions
               </h2>
               <p className="mt-5 max-w-2xl text-base leading-7 text-[#d3dbe0] sm:text-lg sm:leading-8">
-                Specializing in rooftop pool and spa renovations for commercial properties—serving
-                Greater Los Angeles and Orange County.
+                Atlas Pool Solutions provides commercial pool and spa renovation expertise for
+                properties across Greater Los Angeles and Orange County.
               </p>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
@@ -177,8 +177,8 @@ export default function AboutPage() {
                 Built for Better Amenities
               </h2>
               <p className="mt-4 text-base leading-7 text-[#c9d4da] sm:text-lg sm:leading-8">
-                From glossy ceramic to glass tile or fiberglass to pebble finishes, we guide you to
-                a beautiful, energy efficient smart pool that elevates your poolside experience.
+                We help clients upgrade finishes, improve efficiency, and create amenity spaces that
+                feel current, durable, and professionally executed.
               </p>
             </div>
 
@@ -203,9 +203,9 @@ export default function AboutPage() {
 
             <div className="mt-8 rounded-2xl border border-[#4f5f6d] bg-[#222b34]/95 p-5 shadow-[0_14px_30px_rgba(0,0,0,0.25)]">
               <p className="text-base leading-7 text-[#cfd8dd] sm:text-lg">
-                <span className="font-black text-[#f6fbfc]">Did you know</span> that harmful
-                bacteria can cause sickness from a Waterborne Virus? Be sure that your chemistry is
-                taken care of—try us, and feel the difference.
+                Strong renovation planning should be matched by strong water quality standards,
+                dependable circulation, and maintenance practices that support a healthier pool
+                environment.
               </p>
             </div>
           </div>
@@ -219,11 +219,12 @@ export default function AboutPage() {
                   Renovations, Decks & Water Features
                 </h2>
                 <p className="mt-4 text-base leading-8 text-[#c9d4da] sm:text-lg">
-                  We are experts and provide{" "}
+                  We provide{" "}
                   <span className="underline decoration-[#9ec2cd]/70 decoration-2 underline-offset-4">
                     consulting appointments
                   </span>{" "}
-                  to set the best renovation vision that fits your budget. We also renovate{" "}
+                  to help define the right renovation strategy for each property and budget. Our
+                  work also includes{" "}
                   <span className="underline decoration-[#9ec2cd]/70 decoration-2 underline-offset-4">
                     decks
                   </span>
@@ -239,7 +240,7 @@ export default function AboutPage() {
                   <span className="underline decoration-[#9ec2cd]/70 decoration-2 underline-offset-4">
                     water features
                   </span>
-                  , and anything which requires water flow.
+                  , and other water-driven amenity elements.
                 </p>
 
                 <div className="mt-6 flex flex-col gap-3 sm:flex-row">
@@ -272,8 +273,8 @@ export default function AboutPage() {
                 Experience the Difference of Atlas
               </h2>
               <p className="mt-4 text-base leading-7 text-[#c9d4da] sm:text-lg sm:leading-8">
-                From renovations to maintenance plans, our team helps you create a pool environment
-                that is beautiful, efficient, and easy to own.
+                From renovations to maintenance planning, our team helps clients create pool
+                environments that are efficient, attractive, and easier to manage over time.
               </p>
             </div>
 
@@ -311,8 +312,8 @@ export default function AboutPage() {
                 The New Pool Construction Process
               </h2>
               <p className="mt-4 text-base leading-7 text-[#c9d4da] sm:text-lg sm:leading-8">
-                A clear, step-by-step flow—from project design to orientation—so stakeholders stay
-                aligned throughout construction.
+                Our process is designed to keep planning, approvals, construction, and turnover
+                organized from the first meeting through final orientation.
               </p>
             </div>
 
@@ -347,8 +348,8 @@ export default function AboutPage() {
                   Better yet, Call, Text, or Visit Us
                 </h2>
                 <p className="mt-4 text-base leading-7 text-[#c9d4da] sm:text-lg sm:leading-8">
-                  We love renovations, so feel free to make an appointment in our showroom during
-                  our normal business hours.
+                  Contact Atlas Pool Solutions to discuss renovation priorities, showroom meetings,
+                  and the next steps for your property.
                 </p>
 
                 <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">

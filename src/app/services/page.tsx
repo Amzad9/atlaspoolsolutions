@@ -14,9 +14,9 @@ export const metadata: Metadata = {
 };
 
 const proposalPoints = [
-  "Commercial rooftop pool and spa renovation planning",
-  "Equipment modernization and efficiency upgrades",
-  "Deck, fountain, waterfall, and water feature scope reviews",
+  "Commercial pool and spa renovation planning",
+  "Equipment replacement, modernization, and efficiency upgrades",
+  "Deck, fountain, waterfall, and water feature consultations",
 ];
 
 export default function ServicesPage() {
@@ -40,8 +40,9 @@ export default function ServicesPage() {
                 And Project Consultations
               </h2>
               <p className="mt-5 max-w-176 text-base leading-7 text-[#d3dbe0] sm:text-lg sm:leading-8">
-                This page turns the appointment layout from the live Atlas Pool Solutions website
-                into a standalone service page using the same visual theme as the rest of the app.
+                Browse consultation options for renovations, maintenance, equipment upgrades, deck
+                improvements, and new project planning. Each appointment is designed to help you
+                move from early ideas to a clear next step.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-3">
@@ -69,12 +70,12 @@ export default function ServicesPage() {
                   Proposal Support
                 </p>
                 <h2 className="mt-3 text-3xl font-black leading-[0.95] text-[#f0f7f8] sm:text-4xl lg:text-5xl">
-                  Need A Detailed Project Proposal?
+                  Need A Detailed Scope Or Proposal?
                 </h2>
                 <p className="mt-4 max-w-3xl text-base leading-7 text-[#c9d4da] sm:text-lg sm:leading-8">
-                  Atlas Pool Solutions provides consulting appointments to set the best renovation
-                  vision that fits your budget. Reach out when you need a more tailored scope review
-                  or proposal discussion.
+                  Atlas Pool Solutions works with property teams, managers, and owners to define
+                  practical renovation priorities, align project scope with budget, and plan the
+                  right improvements for each amenity.
                 </p>
 
                 <div className="mt-7 grid gap-3">
@@ -122,16 +123,16 @@ export default function ServicesPage() {
                 </p>
                 <div className="mt-4 space-y-4 text-base leading-7 text-[#cfd8dd]">
                   <p>
-                    All appointments shown here are styled from the screenshot you shared from the
-                    existing website.
+                    Each service option is designed to make scheduling simple and to help your team
+                    start the conversation with the right level of detail.
                   </p>
                   <p>
-                    The booking actions now open a responsive multi-step scheduling flow so visitors
-                    can choose a date, pick a time, and submit project details in one place.
+                    The booking flow allows visitors to choose a date, select a time, and provide
+                    project information in a single streamlined experience.
                   </p>
                   <p>
-                    If you want, I can also connect each card to a dedicated booking URL or embed an
-                    actual appointment widget next.
+                    For more complex requests, Atlas can also coordinate proposal reviews and
+                    follow-up consultations directly through the contact team.
                   </p>
                 </div>
               </div>

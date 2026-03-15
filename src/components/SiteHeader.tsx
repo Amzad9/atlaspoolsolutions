@@ -43,8 +43,8 @@ export default function SiteHeader({ activeLabel }: { activeLabel?: string }) {
             />
           </div>
           <div className="min-w-0">
-            <h2 className="text-lg font-bold leading-none tracking-[-0.02em] text-[#18a8f5] sm:text-xl lg:text-2xl">
-              <span className="block whitespace-nowrap">Atlas Pool Solutions</span>
+            <h2 className="text-lg font-bold uppercase leading-none tracking-[0.04em] text-white sm:text-xl lg:text-2xl">
+              <span className="block whitespace-nowrap">ATLAS POOL SOLUTIONS</span>
             </h2>
            
           </div>

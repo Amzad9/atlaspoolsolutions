@@ -1,12 +1,28 @@
 import type { ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Star } from "lucide-react";
+import { CompassIcon, ShieldIcon, SparkleIcon, Star } from "lucide-react";
 
 import GallerySection from "../components/GallerySection";
 import SiteFooter from "../components/SiteFooter";
 import SiteHeader from "../components/SiteHeader";
-
+const aboutCards = [
+  {
+    title: "What We Do",
+    body: "Atlas Pool Solutions serves Greater Los Angeles and Orange County with renovation planning and construction support for commercial pools, spas, decks, fountains, waterfalls, and water features.",
+    icon: <CompassIcon />,
+  },
+  {
+    title: "Why We Do It",
+    body: "Well-executed renovations improve more than appearance. They strengthen the overall amenity experience, modernize performance, and help properties present a more valuable, better maintained environment.",
+    icon: <SparkleIcon />,
+  },
+  {
+    title: "Why Choose Us",
+    body: "We combine practical project guidance, finish expertise, and equipment knowledge to help clients move from concept to execution with a scope that fits their operational goals and budget.",
+    icon: <ShieldIcon />,
+  },
+];
 const serviceCards = [
   {
     title: "Commercial Pool Renovations",
@@ -111,6 +127,47 @@ export default function Home() {
                   </div>
                 </article>
               ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-[#1b2229] px-4 pt-10 sm:px-8 sm:pt-14">
+          <div className="container mx-auto">
+            <div className="mx-auto max-w-4xl text-center">
+              <h2 className="text-3xl font-black leading-[0.95] text-[#f0f7f8] sm:text-4xl lg:text-5xl">
+                Built for Better Amenities
+              </h2>
+              <p className="mt-4 text-base leading-7 text-[#c9d4da] sm:text-lg sm:leading-8">
+                We help clients upgrade finishes, improve efficiency, and create amenity spaces that
+                feel current, durable, and professionally executed.
+              </p>
+            </div>
+
+            <div className="mt-10 grid gap-5 lg:grid-cols-3">
+              {aboutCards.map((card) => (
+                <article
+                  key={card.title}
+                  className="rounded-2xl border border-[#4f5f6d] bg-linear-to-br from-[#2a3139]/95 to-[#1e252d]/95 p-5 shadow-[0_16px_34px_rgba(0,0,0,0.35)]"
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="mt-1 text-[#9ec2cd]">{card.icon}</div>
+                    <div>
+                      <h3 className="text-2xl font-black uppercase leading-tight text-[#f4fbfd]">
+                        {card.title}
+                      </h3>
+                      <p className="mt-3 text-base leading-7 text-[#c7d2d9]">{card.body}</p>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+
+            <div className="mt-8 rounded-2xl border border-[#4f5f6d] bg-[#222b34]/95 p-5 shadow-[0_14px_30px_rgba(0,0,0,0.25)]">
+              <p className="text-base leading-7 text-[#cfd8dd] sm:text-lg">
+                Strong renovation planning should be matched by strong water quality standards,
+                dependable circulation, and maintenance practices that support a healthier pool
+                environment.
+              </p>
             </div>
           </div>
         </section>

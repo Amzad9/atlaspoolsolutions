@@ -34,31 +34,31 @@ const differenceCards = [
   {
     title: "Fiberglass Pools",
     body: "Fiberglass solutions offer a durable, low-maintenance option for properties seeking reliable performance and a streamlined finish approach.",
-    image: "/rs=w_1280,h_850.webp",
+    image: "/abouts/img1.png",
     alt: "Pool water and deck finish example",
   },
   {
     title: "Concrete Pools",
     body: "Concrete pool solutions support flexible layouts, custom detailing, and long-term durability across a wide range of commercial applications.",
-    image: "/images/expert-comercial-pool.png",
+    image: "/abouts/img2.png",
     alt: "Pool design planning and drafting board",
   },
   {
     title: "Pool Renovations",
     body: "From targeted upgrades to full amenity repositioning, our renovation work is built to improve both presentation and performance.",
-    image: "/images/advanced.png",
+    image: "/abouts/img3.png",
     alt: "Commercial pool equipment and modernization",
   },
   {
     title: "Pool Financing",
     body: "For projects requiring additional planning support, our team can discuss options and next steps during the consultation process.",
-    image: "/images/clean_features.png",
+    image: "/abouts/img4.png",
     alt: "Luxury rooftop pool amenity space",
   },
   {
     title: "Pool Maintenance Plans",
     body: "Maintenance planning helps keep pools and spas clean, consistent, and ready for daily use while reducing avoidable operational issues.",
-    image: "/images/hero2.png",
+    image: "/abouts/img5.png",
     alt: "Rooftop pool and spa setting",
   },
 ];
@@ -155,7 +155,7 @@ export default function AboutPage() {
               <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
                 <Link
                   href="/contact"
-                  className="w-full rounded-full border border-[#f06a74] bg-gradient-to-b from-[#ef4b57] to-[#c92d3a] px-6 py-3 text-center text-sm font-black uppercase tracking-wide text-[#fdfcfc] shadow-[0_0_16px_rgba(230,57,70,0.45)] transition hover:brightness-105 sm:w-auto sm:px-8 sm:text-base"
+                  className="w-full rounded-full border border-[#f06a74] bg-linear-to-b from-[#ef4b57] to-[#c92d3a] px-6 py-3 text-center text-sm font-black uppercase tracking-wide text-[#fdfcfc] shadow-[0_0_16px_rgba(230,57,70,0.45)] transition hover:brightness-105 sm:w-auto sm:px-8 sm:text-base"
                 >
                   Book A Consultation
                 </Link>
@@ -170,7 +170,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="bg-[#1b2229] px-4 py-10 sm:px-8 sm:py-14">
+        <section className="bg-[#1b2229] px-4 pt-10 sm:px-8 sm:pt-14">
           <div className="container mx-auto">
             <div className="mx-auto max-w-4xl text-center">
               <h2 className="text-3xl font-black leading-[0.95] text-[#f0f7f8] sm:text-4xl lg:text-5xl">
@@ -219,34 +219,15 @@ export default function AboutPage() {
                   Renovations, Decks & Water Features
                 </h2>
                 <p className="mt-4 text-base leading-8 text-[#c9d4da] sm:text-lg">
-                  We provide{" "}
-                  <span className="underline decoration-[#9ec2cd]/70 decoration-2 underline-offset-4">
-                    consulting appointments
-                  </span>{" "}
-                  to help define the right renovation strategy for each property and budget. Our
-                  work also includes{" "}
-                  <span className="underline decoration-[#9ec2cd]/70 decoration-2 underline-offset-4">
-                    decks
-                  </span>
-                  ,{" "}
-                  <span className="underline decoration-[#9ec2cd]/70 decoration-2 underline-offset-4">
-                    fountains
-                  </span>
-                  ,{" "}
-                  <span className="underline decoration-[#9ec2cd]/70 decoration-2 underline-offset-4">
-                    waterfalls
-                  </span>
-                  ,{" "}
-                  <span className="underline decoration-[#9ec2cd]/70 decoration-2 underline-offset-4">
-                    water features
-                  </span>
-                  , and other water-driven amenity elements.
+                  We provide consulting appointments to help define the right renovation strategy
+                  for each property and budget. Our work also includes decks, fountains,
+                  waterfalls, water features, and other water-driven amenity elements.
                 </p>
 
                 <div className="mt-6 flex flex-col gap-3 sm:flex-row">
                   <Link
                     href="/contact"
-                    className="w-full rounded-full border border-[#f06a74] bg-gradient-to-b from-[#ef4b57] to-[#c92d3a] px-6 py-3 text-center text-sm font-black uppercase tracking-wide text-[#fdfcfc] shadow-[0_0_14px_rgba(230,57,70,0.4)] transition hover:brightness-105 sm:w-fit"
+                    className="w-full rounded-full border border-[#f06a74] bg-linear-to-b from-[#ef4b57] to-[#c92d3a] px-6 py-3 text-center text-sm font-black uppercase tracking-wide text-[#fdfcfc] shadow-[0_0_14px_rgba(230,57,70,0.4)] transition hover:brightness-105 sm:w-fit"
                   >
                     Schedule A Showroom Visit
                   </Link>
@@ -269,7 +250,7 @@ export default function AboutPage() {
         <section className="bg-[#1b2229] px-4 py-10 sm:px-8 sm:py-14">
           <div className="container mx-auto">
             <div className="mx-auto max-w-4xl text-center">
-              <h2 className="text-3xl font-black leading-[0.95] text-[#f0f7f8] sm:text-4xl lg:text-5xl">
+              <h2 className="text-2xl font-black leading-none text-[#f0f7f8] sm:text-3xl lg:text-4xl">
                 Experience the Difference of Atlas
               </h2>
               <p className="mt-4 text-base leading-7 text-[#c9d4da] sm:text-lg sm:leading-8">
@@ -294,7 +275,7 @@ export default function AboutPage() {
                     <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-black/45 via-transparent to-transparent" />
                   </div>
                   <div className="mt-4">
-                    <h3 className="text-xl font-black uppercase leading-tight text-[#f4fbfd]">
+                    <h3 className="text-md font-black uppercase leading-tight text-[#f4fbfd]">
                       {card.title}
                     </h3>
                     <p className="mt-2 text-sm leading-6 text-[#c7d2d9]">{card.body}</p>
@@ -344,7 +325,7 @@ export default function AboutPage() {
           <div className="container mx-auto">
             <div className="grid gap-6 rounded-[22px] border border-[#495867] bg-linear-to-br from-[#2a3139]/95 to-[#1f252d]/95 p-6 shadow-[0_18px_44px_rgba(0,0,0,0.35)] lg:grid-cols-12 lg:p-8">
               <div className="lg:col-span-7">
-                <h2 className="text-3xl font-black leading-[0.95] text-[#f0f7f8] sm:text-4xl lg:text-5xl">
+                <h2 className="text-2xl font-black leading-[0.95] text-[#f0f7f8] sm:text-4xl">
                   Better yet, Call, Text, or Visit Us
                 </h2>
                 <p className="mt-4 text-base leading-7 text-[#c9d4da] sm:text-lg sm:leading-8">
@@ -355,7 +336,7 @@ export default function AboutPage() {
                 <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                   <Link
                     href="/contact"
-                    className="w-full rounded-full border border-[#f06a74] bg-gradient-to-b from-[#ef4b57] to-[#c92d3a] px-6 py-3 text-center text-sm font-black uppercase tracking-wide text-[#fdfcfc] shadow-[0_0_14px_rgba(230,57,70,0.4)] transition hover:brightness-105 sm:w-fit sm:px-8 sm:text-base"
+                    className="w-full rounded-full border border-[#f06a74] bg-linear-to-b from-[#ef4b57] to-[#c92d3a] px-6 py-3 text-center text-sm font-black uppercase tracking-wide text-[#fdfcfc] shadow-[0_0_14px_rgba(230,57,70,0.4)] transition hover:brightness-105 sm:w-fit sm:px-8 sm:text-base"
                   >
                     Contact Atlas
                   </Link>

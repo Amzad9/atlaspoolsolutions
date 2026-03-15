@@ -49,23 +49,26 @@ const serviceCards = [
 
 const testimonials = [
   {
-    name: "Property Manager",
+    name: "J. Adams",
+    company: "Best Property Management",
     message:
-      "Atlas helped us modernize an aging rooftop amenity with a clear renovation plan, practical finish recommendations, and strong communication throughout the process.",
+      "Atlas delivered a clear renovation plan, practical finish guidance, and a noticeably stronger amenity presentation.",
     image: "/images/test1.png",
     alt: "Portrait of Sarah testimonial client",
   },
   {
-    name: "Operations Team",
+    name: "M. Bennett",
+    company: "Crestline Operations Group",
     message:
-      "Their team approached equipment upgrades with a strong understanding of performance, budget, and long-term maintenance requirements.",
+      "Their team approached our equipment upgrade with a strong understanding of performance, budget, and long-term maintenance needs.",
     image: "/images/test2.png",
     alt: "Portrait of Michael testimonial client",
   },
   {
-    name: "Hospitality Client",
+    name: "D. Lewis",
+    company: "Summit Hospitality Partners",
     message:
-      "From initial consultation to project delivery, Atlas brought structure, professionalism, and a finished result that elevated the entire amenity.",
+      "From consultation through delivery, Atlas brought structure, professionalism, and a finished result that elevated the entire amenity.",
     image: "/images/test3.png",
     alt: "Portrait of David testimonial client",
   },
@@ -90,7 +93,7 @@ export default function Home() {
                   Atlas Pool Solutions
                 </span>
                 <br />
-                Rooftop Pool And Spa Renovations
+                Rooftop POOL & SPA Renovations
               </h1>
               <p className="mt-4 max-w-175 text-base leading-7 text-[#d3dbe0] sm:text-lg sm:leading-8">
                 Atlas Pool Solutions specializes in commercial rooftop pool and spa renovations for
@@ -209,15 +212,22 @@ export default function Home() {
               {testimonials.map((item) => (
                 <article
                   key={item.name}
-                  className="rounded-2xl border border-[#4f5f6d] bg-[#242d36]/95 p-3"
+                  className="flex h-full flex-col rounded-2xl border border-[#4f5f6d] bg-[#242d36]/95 p-3"
                 >
                   <div className="relative h-64 overflow-hidden rounded-xl">
                     <Image src={item.image} alt={item.alt} fill className="object-cover" />
                   </div>
-                  <div className="-mt-3 rounded-b-2xl border border-[#566879] bg-linear-to-br from-[#2a3139]/95 to-[#1e252d]/95 p-4 pt-8 shadow-[0_10px_25px_rgba(0,0,0,0.45)]">
-                    <p className="text-xl leading-6 text-[#d7dee2]">{item.message}</p>
-                    <div className="mt-3 flex items-center justify-between text-[#9ec2cd]">
-                      <p className="text-2xl font-black text-[#f4fbfd] sm:text-3xl">{item.name}</p>
+                  <div className="-mt-3 flex flex-1 flex-col rounded-b-2xl border border-[#566879] bg-linear-to-br from-[#2a3139]/95 to-[#1e252d]/95 p-4 pt-8 shadow-[0_10px_25px_rgba(0,0,0,0.45)]">
+                    <p className="min-h-28 text-lg leading-7 text-[#d7dee2] italic sm:min-h-32">
+                      &ldquo;{item.message}&rdquo;
+                    </p>
+                    <div className="mt-auto flex items-end justify-between gap-3 text-[#9ec2cd]">
+                      <div className="min-w-0">
+                        <p className="text-lg font-black text-[#f4fbfd] sm:text-2xl">{item.name}</p>
+                        <p className="mt-1 text-xs font-semibold uppercase tracking-[0.14em] text-[#9ec2cd] sm:text-sm">
+                          {item.company}
+                        </p>
+                      </div>
                       <div className="flex items-center gap-1 text-[#f1d2a7]">
                         {Array.from({ length: 5 }).map((_, i) => (
                           <Star
@@ -249,7 +259,7 @@ export default function Home() {
                 <h3 className="text-2xl font-semibold text-[#f0f7f8] sm:text-3xl lg:text-4xl">
                   Built For Commercial Properties
                 </h3>
-                <p className="mt-1 max-w-4xl text-base leading-7 text-[#cfd8dd] sm:text-lg sm:leading-8 lg:text-2xl">
+                <p className="mt-1 max-w-7xl text-base leading-7 text-[#cfd8dd] sm:text-lg sm:leading-8 lg:text-2xl">
                   We help owners and managers improve pool, spa, and deck amenities with renovation
                   solutions that balance presentation, performance, and operational efficiency.
                 </p>

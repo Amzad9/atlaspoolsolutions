@@ -20,7 +20,7 @@ export const bookingServices: BookingService[] = [
     durationLabel: "30 mins",
     durationMinutes: 30,
     priceLabel: "Free",
-    image: "/images/expert-comercial-pool.png",
+    image: "/rs=h_{640}.webp",
     alt: "Commercial pool renovation planning materials",
     locationType: "client-site",
   },

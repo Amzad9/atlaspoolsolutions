@@ -128,26 +128,25 @@ const processSteps = [
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen text-[#eaf4f6]">
-      <div className="pb-10">
+    <main className="min-h-screen bg-white text-slate-900">
+      <div className="pb-0">
         <SiteHeader activeLabel="About" />
 
-        <section className="relative bg-[#0f141a] bg-[url('/images/hero.png')] bg-cover bg-center px-4 pb-12 pt-10 sm:px-8 sm:pb-16 sm:pt-16">
-          <div className="pointer-events-none absolute inset-0 bg-linear-to-r from-[#0e141b] via-[#0e141b]/85 to-transparent" />
-          <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-black via-black/10 to-transparent" />
+        <section className="relative bg-white bg-[url('/abouts/banner-abouts.png')] bg-cover bg-center px-4 min-h-[600px] pb-12 pt-10 sm:px-8 sm:pb-16 sm:pt-16">
+        <div className="absolute inset-0 bg-linear-to-r from-white/99 via-black/ to-transparent" />
 
           <div className="container mx-auto">
             <div className="relative z-10 max-w-4xl">
-              <p className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#d3dbe0] shadow-[0_0_0_1px_rgba(255,255,255,0.04)] sm:text-sm">
+              <p className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/70 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#1f252d] shadow-[0_10px_24px_rgba(15,23,42,0.08)] sm:text-sm">
                 ATLAS POOL SOLUTIONS CA #990127
               </p>
 
-              <h2 className="mt-5 text-4xl font-black uppercase leading-[0.9] text-[#f6fbfc] drop-shadow-[0_3px_6px_rgba(0,0,0,0.72)] sm:text-6xl lg:text-6xl">
+              <h2 className="mt-5 text-4xl font-black uppercase leading-[0.9] text-slate-900 sm:text-6xl lg:text-6xl">
                 About
                 <br />
                 Atlas Pool Solutions
               </h2>
-              <p className="mt-5 max-w-2xl text-base leading-7 text-[#d3dbe0] sm:text-lg sm:leading-8">
+              <p className="mt-5 max-w-2xl text-base leading-7 text-slate-700 sm:text-lg sm:leading-8">
                 Atlas Pool Solutions provides commercial pool and spa renovation expertise for
                 properties across Greater Los Angeles and Orange County.
               </p>
@@ -155,13 +154,13 @@ export default function AboutPage() {
               <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
                 <Link
                   href="/contact"
-                  className="w-full rounded-full border border-[#f06a74] bg-linear-to-b from-[#ef4b57] to-[#c92d3a] px-6 py-3 text-center text-sm font-black uppercase tracking-wide text-[#fdfcfc] shadow-[0_0_16px_rgba(230,57,70,0.45)] transition hover:brightness-105 sm:w-auto sm:px-8 sm:text-base"
+                  className="w-full rounded-full border border-[#4682B4] bg-[#4682B4] px-6 py-3 text-center text-sm font-black uppercase tracking-wide text-white shadow-[0_0_16px_rgba(70,130,180,0.35)] transition hover:brightness-105 sm:w-auto sm:px-8 sm:text-base"
                 >
                   Book A Consultation
                 </Link>
                 <Link
                   href="/case-studies"
-                  className="w-full rounded-full border border-white/20 bg-white/5 px-6 py-3 text-center text-sm font-black uppercase tracking-wide text-[#f6fbfc] shadow-[0_0_0_1px_rgba(255,255,255,0.06)] transition hover:bg-white/10 sm:w-auto sm:px-8 sm:text-base"
+                  className="w-full rounded-full border border-slate-200 bg-white px-6 py-3 text-center text-sm font-black uppercase tracking-wide text-[#1f252d] shadow-[0_10px_24px_rgba(15,23,42,0.08)] transition hover:bg-slate-50 sm:w-auto sm:px-8 sm:text-base"
                 >
                   View Case Studies
                 </Link>
@@ -170,13 +169,13 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="bg-[#1b2229] px-4 pt-10 sm:px-8 sm:pt-14">
+        <section className="bg-white px-4 pt-10 sm:px-8 sm:pt-14">
           <div className="container mx-auto">
             <div className="mx-auto max-w-4xl text-center">
-              <h2 className="text-3xl font-black leading-[0.95] text-[#f0f7f8] sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl font-black leading-[0.95] text-slate-900 sm:text-4xl lg:text-5xl">
                 Built for Better Amenities
               </h2>
-              <p className="mt-4 text-base leading-7 text-[#c9d4da] sm:text-lg sm:leading-8">
+              <p className="mt-4 text-base leading-7 text-slate-700 sm:text-lg sm:leading-8">
                 We help clients upgrade finishes, improve efficiency, and create amenity spaces that
                 feel current, durable, and professionally executed.
               </p>
@@ -186,23 +185,23 @@ export default function AboutPage() {
               {aboutCards.map((card) => (
                 <article
                   key={card.title}
-                  className="rounded-2xl border border-[#4f5f6d] bg-linear-to-br from-[#2a3139]/95 to-[#1e252d]/95 p-5 shadow-[0_16px_34px_rgba(0,0,0,0.35)]"
+                  className="rounded-2xl border border-[#3c73a1] bg-[#4682B4] p-5 shadow-[0_16px_34px_rgba(70,130,180,0.25)]"
                 >
                   <div className="flex items-start gap-4">
-                    <div className="mt-1 text-[#9ec2cd]">{card.icon}</div>
+                    <div className="mt-1 text-white">{card.icon}</div>
                     <div>
-                      <h3 className="text-2xl font-black uppercase leading-tight text-[#f4fbfd]">
+                      <h3 className="text-2xl font-black uppercase leading-tight text-white">
                         {card.title}
                       </h3>
-                      <p className="mt-3 text-base leading-7 text-[#c7d2d9]">{card.body}</p>
+                      <p className="mt-3 text-base leading-7 text-white/90">{card.body}</p>
                     </div>
                   </div>
                 </article>
               ))}
             </div>
 
-            <div className="mt-8 rounded-2xl border border-[#4f5f6d] bg-[#222b34]/95 p-5 shadow-[0_14px_30px_rgba(0,0,0,0.25)]">
-              <p className="text-base leading-7 text-[#cfd8dd] sm:text-lg">
+            <div className="mt-8 rounded-2xl border border-slate-200 bg-slate-50 p-5 shadow-[0_14px_30px_rgba(15,23,42,0.10)]">
+              <p className="text-base leading-7 text-slate-700 sm:text-lg">
                 Strong renovation planning should be matched by strong water quality standards,
                 dependable circulation, and maintenance practices that support a healthier pool
                 environment.
@@ -211,14 +210,14 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="bg-linear-to-b from-[#1b2229] to-[#151b22] px-4 py-10 sm:px-8 sm:py-14">
+        <section className="bg-white px-4 py-10 sm:px-8">
           <div className="container mx-auto">
-            <div className="grid gap-6 rounded-[22px] border border-[#495867] bg-linear-to-br from-[#2c3946]/75 to-[#1f2731]/95 p-5 shadow-[0_18px_44px_rgba(0,0,0,0.35)] lg:grid-cols-12 lg:p-7">
+            <div className="grid gap-6 rounded-[22px] border border-slate-200 bg-slate-50 p-5 shadow-[0_18px_44px_rgba(15,23,42,0.10)] lg:grid-cols-12 lg:p-7">
               <div className="lg:col-span-5">
-                <h2 className="text-3xl font-black leading-[0.95] text-[#f0f7f8] sm:text-4xl">
+                <h2 className="text-3xl font-black leading-[0.95] text-slate-900 sm:text-4xl">
                   Renovations, Decks & Water Features
                 </h2>
-                <p className="mt-4 text-base leading-8 text-[#c9d4da] sm:text-lg">
+                <p className="mt-4 text-base leading-8 text-slate-700 sm:text-lg">
                   We provide consulting appointments to help define the right renovation strategy
                   for each property and budget. Our work also includes decks, fountains,
                   waterfalls, water features, and other water-driven amenity elements.
@@ -227,33 +226,32 @@ export default function AboutPage() {
                 <div className="mt-6 flex flex-col gap-3 sm:flex-row">
                   <Link
                     href="/contact"
-                    className="w-full rounded-full border border-[#f06a74] bg-linear-to-b from-[#ef4b57] to-[#c92d3a] px-6 py-3 text-center text-sm font-black uppercase tracking-wide text-[#fdfcfc] shadow-[0_0_14px_rgba(230,57,70,0.4)] transition hover:brightness-105 sm:w-fit"
+                    className="w-full rounded-full border border-[#4682B4] bg-[#4682B4] px-6 py-3 text-center text-sm font-black uppercase tracking-wide text-white shadow-[0_0_14px_rgba(70,130,180,0.30)] transition hover:brightness-105 sm:w-fit"
                   >
                     Schedule A Showroom Visit
                   </Link>
                 </div>
               </div>
 
-              <div className="relative h-64 overflow-hidden rounded-3xl border border-white/15 shadow-inner lg:col-span-7 lg:h-auto">
+              <div className="relative h-64 overflow-hidden rounded-3xl border border-slate-200 shadow-inner lg:col-span-7 lg:h-auto">
                 <Image
                   src="/images/clean_features.png"
                   alt="Pool amenity renovation with modern finishes"
                   fill
                   className="object-cover"
                 />
-                <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-black/35 via-transparent to-transparent" />
               </div>
             </div>
           </div>
         </section>
 
-        <section className="bg-[#1b2229] px-4 py-10 sm:px-8 sm:py-14">
+        <section className="bg-white px-4 py-10 sm:px-8">
           <div className="container mx-auto">
             <div className="mx-auto max-w-4xl text-center">
-              <h2 className="text-2xl font-black leading-none text-[#f0f7f8] sm:text-3xl lg:text-4xl">
+              <h2 className="text-2xl font-black leading-none text-slate-900 sm:text-3xl lg:text-4xl">
                 Experience the Difference of Atlas
               </h2>
-              <p className="mt-4 text-base leading-7 text-[#c9d4da] sm:text-lg sm:leading-8">
+              <p className="mt-4 text-base leading-7 text-slate-700 sm:text-lg sm:leading-8">
                 From renovations to maintenance planning, our team helps clients create pool
                 environments that are efficient, attractive, and easier to manage over time.
               </p>
@@ -263,22 +261,21 @@ export default function AboutPage() {
               {differenceCards.map((card) => (
                 <article
                   key={card.title}
-                  className="group rounded-2xl border border-[#4f5f6d] bg-[#242d36]/95 p-3 shadow-[0_12px_26px_rgba(0,0,0,0.25)] lg:col-span-1"
+                  className="group rounded-2xl border border-[#3c73a1] bg-[#4682B4] p-3 shadow-[0_12px_26px_rgba(70,130,180,0.22)] lg:col-span-1"
                 >
-                  <div className="relative h-40 overflow-hidden rounded-xl border border-white/15">
+                  <div className="relative h-40 overflow-hidden rounded-xl border border-white/35">
                     <Image
                       src={card.image}
                       alt={card.alt}
                       fill
                       className="object-cover transition duration-500 group-hover:scale-[1.03]"
                     />
-                    <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-black/45 via-transparent to-transparent" />
                   </div>
                   <div className="mt-4">
-                    <h3 className="text-md font-black uppercase leading-tight text-[#f4fbfd]">
+                    <h3 className="text-md font-black uppercase leading-tight text-white">
                       {card.title}
                     </h3>
-                    <p className="mt-2 text-sm leading-6 text-[#c7d2d9]">{card.body}</p>
+                    <p className="mt-2 text-sm leading-6 text-white/90">{card.body}</p>
                   </div>
                 </article>
               ))}
@@ -286,13 +283,13 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <section className="bg-linear-to-b from-[#151b22] to-[#0f141a] px-4 py-10 sm:px-8 sm:py-14">
+        <section className="bg-white px-4 py-10 sm:px-8">
           <div className="container mx-auto">
             <div className="mx-auto max-w-4xl text-center">
-              <h2 className="text-3xl font-black leading-[0.95] text-[#f0f7f8] sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl font-black leading-[0.95] text-slate-900 sm:text-4xl lg:text-5xl">
                 The New Pool Construction Process
               </h2>
-              <p className="mt-4 text-base leading-7 text-[#c9d4da] sm:text-lg sm:leading-8">
+              <p className="mt-4 text-base leading-7 text-slate-700 sm:text-lg sm:leading-8">
                 Our process is designed to keep planning, approvals, construction, and turnover
                 organized from the first meeting through final orientation.
               </p>
@@ -302,33 +299,33 @@ export default function AboutPage() {
               {processSteps.map((step) => (
                 <details
                   key={step.title}
-                  className="group rounded-2xl border border-[#4f5f6d] bg-[#1c232b]/85 p-5 shadow-[0_10px_24px_rgba(0,0,0,0.25)]"
+                  className="group rounded-2xl border border-slate-200 bg-slate-50 p-5 shadow-[0_10px_24px_rgba(15,23,42,0.10)]"
                 >
                   <summary className="cursor-pointer list-none">
                     <div className="flex items-start justify-between gap-4">
                       <div>
-                        <p className="text-lg font-black text-[#f6fbfc] sm:text-xl">{step.title}</p>
+                        <p className="text-lg font-black text-slate-900 sm:text-xl">{step.title}</p>
                       </div>
-                      <span className="mt-1 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/15 bg-white/5 text-sm font-black text-[#dbe3e7] transition group-open:rotate-45">
+                      <span className="mt-1 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-slate-200 bg-white text-sm font-black text-slate-700 transition group-open:rotate-45">
                         +
                       </span>
                     </div>
                   </summary>
-                  <p className="mt-3 text-base leading-7 text-[#c9d4da]">{step.body}</p>
+                  <p className="mt-3 text-base leading-7 text-slate-700">{step.body}</p>
                 </details>
               ))}
             </div>
           </div>
         </section>
 
-        <section className="bg-[#1b2229] px-4 py-10 sm:px-8 sm:py-14">
+        <section className="bg-white px-4 py-10 sm:px-8">
           <div className="container mx-auto">
-            <div className="grid gap-6 rounded-[22px] border border-[#495867] bg-linear-to-br from-[#2a3139]/95 to-[#1f252d]/95 p-6 shadow-[0_18px_44px_rgba(0,0,0,0.35)] lg:grid-cols-12 lg:p-8">
+            <div className="grid gap-6 rounded-[22px] border border-slate-200 bg-slate-50 p-6 shadow-[0_18px_44px_rgba(15,23,42,0.10)] lg:grid-cols-12 lg:p-8">
               <div className="lg:col-span-7">
-                <h2 className="text-2xl font-black leading-[0.95] text-[#f0f7f8] sm:text-4xl">
+                <h2 className="text-2xl font-black leading-[0.95] text-slate-900 sm:text-4xl">
                   Better yet, Call, Text, or Visit Us
                 </h2>
-                <p className="mt-4 text-base leading-7 text-[#c9d4da] sm:text-lg sm:leading-8">
+                <p className="mt-4 text-base leading-7 text-slate-700 sm:text-lg sm:leading-8">
                   Contact Atlas Pool Solutions to discuss renovation priorities, showroom meetings,
                   and the next steps for your property.
                 </p>
@@ -336,39 +333,39 @@ export default function AboutPage() {
                 <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
                   <Link
                     href="/contact"
-                    className="w-full rounded-full border border-[#f06a74] bg-linear-to-b from-[#ef4b57] to-[#c92d3a] px-6 py-3 text-center text-sm font-black uppercase tracking-wide text-[#fdfcfc] shadow-[0_0_14px_rgba(230,57,70,0.4)] transition hover:brightness-105 sm:w-fit sm:px-8 sm:text-base"
+                    className="w-full rounded-full border border-[#4682B4] bg-[#4682B4] px-6 py-3 text-center text-sm font-black uppercase tracking-wide text-white shadow-[0_0_14px_rgba(70,130,180,0.30)] transition hover:brightness-105 sm:w-fit sm:px-8 sm:text-base"
                   >
                     Contact Atlas
                   </Link>
                   <a
                     href="tel:13103416123"
-                    className="w-full rounded-full border border-white/20 bg-white/5 px-6 py-3 text-center text-sm font-black uppercase tracking-wide text-[#f6fbfc] shadow-[0_0_0_1px_rgba(255,255,255,0.06)] transition hover:bg-white/10 sm:w-fit sm:px-8 sm:text-base"
+                    className="w-full rounded-full border border-slate-200 bg-white px-6 py-3 text-center text-sm font-black uppercase tracking-wide text-[#1f252d] shadow-[0_10px_24px_rgba(15,23,42,0.08)] transition hover:bg-slate-50 sm:w-fit sm:px-8 sm:text-base"
                   >
                     Call 310.341.6123
                   </a>
                 </div>
               </div>
 
-              <div className="relative overflow-hidden rounded-3xl border border-white/15 bg-[#141a20] p-5 shadow-inner lg:col-span-5">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(158,194,205,0.25)_0%,rgba(0,0,0,0)_60%)]" />
+              <div className="relative overflow-hidden rounded-3xl border border-slate-200 bg-white p-5 shadow-inner lg:col-span-5">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(70,130,180,0.18)_0%,rgba(255,255,255,0)_60%)]" />
                 <div className="relative">
-                  <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#9ec2cd]">
+                  <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#4682B4]">
                     Showroom
                   </p>
-                  <p className="mt-2 text-lg font-black text-[#f6fbfc]">
+                  <p className="mt-2 text-lg font-black text-slate-900">
                     Atlas Pool Solutions, Inc
                   </p>
-                  <p className="mt-2 text-base leading-7 text-[#cfd8dd]">
+                  <p className="mt-2 text-base leading-7 text-slate-700">
                     3693 San Gabriel River Parkway,
                     <br />
                     Pico Rivera, California 90660, United States
                   </p>
-                  <p className="mt-4 text-base leading-7 text-[#cfd8dd]">
+                  <p className="mt-4 text-base leading-7 text-slate-700">
                     showroom@atlaspoolsolutions.com
                     <br />
                     310.341.6123
                   </p>
-                  <p className="mt-4 text-sm leading-6 text-[#cfd8dd]">
+                  <p className="mt-4 text-sm leading-6 text-slate-700">
                     For work orders for current clients, please contact us at
                     Operations@atlaspoolsolutions.com at any time.
                   </p>
@@ -386,7 +383,7 @@ export default function AboutPage() {
 
 function IconFrame({ children }: { children: ReactNode }) {
   return (
-    <span className="grid h-12 w-12 shrink-0 place-items-center rounded-md border border-[#61717f] bg-[#2a3139]/90">
+    <span className="grid h-12 w-12 shrink-0 place-items-center rounded-md border border-white/35 bg-white/15">
       {children}
     </span>
   );

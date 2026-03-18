@@ -204,7 +204,7 @@ export default function ServiceBookingModal({
 
   return (
     <div className="fixed inset-0 z-50 flex items-start justify-center overflow-y-auto bg-black/80 px-2 py-2 sm:px-4 sm:py-6 lg:px-6 lg:py-10">
-      <div className="w-full max-w-6xl overflow-hidden rounded-[22px] border border-[#43515d] bg-[#0b0f14] shadow-[0_28px_80px_rgba(0,0,0,0.6)] sm:rounded-[28px]">
+      <div className="w-full max-w-8xl overflow-hidden rounded-[22px] border border-[#43515d] bg-[#0b0f14] shadow-[0_28px_80px_rgba(0,0,0,0.6)] sm:rounded-[28px]">
         <div className="flex items-center justify-between border-b border-white/8 bg-[#6f8fa4] px-4 py-4 sm:px-5 sm:py-4 lg:px-7">
           <div className="text-sm font-black uppercase tracking-[0.18em] text-white/95">
             Service Booking

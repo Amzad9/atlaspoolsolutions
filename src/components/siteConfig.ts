@@ -7,7 +7,6 @@ export const siteNav: SiteNavItem[] = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Services", href: "/services" },
-  { label: "Gallery", href: "/gallery" },
   { label: "Case Studies", href: "/case-studies" },
   { label: "Contact", href: "/contact" },
 ];
@@ -51,4 +50,3 @@ export const siteContact = {
     },
   ],
 } as const;
-

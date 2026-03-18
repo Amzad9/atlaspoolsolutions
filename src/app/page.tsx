@@ -26,7 +26,7 @@ const serviceCards = [
   {
     title: "Commercial Pool Renovations",
     body: "We renovate commercial pools and spas with durable finishes, updated systems, and practical improvements that support long-term performance.",
-    image: "/images/expert-comercial-pool.png",
+    image: "/rs=h_{640}.webp",
     alt: "Commercial pool design planning board and draft layout",
     icon: <PoolPlanIcon />,
   },

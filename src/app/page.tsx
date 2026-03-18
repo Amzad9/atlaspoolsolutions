@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { CompassIcon, ShieldIcon, SparkleIcon, Star } from "lucide-react";
 
-import GallerySection from "../components/GallerySection";
 import SiteFooter from "../components/SiteFooter";
 import SiteHeader from "../components/SiteHeader";
 const aboutCards = [
@@ -53,7 +52,7 @@ const testimonials = [
     company: "Best Property Management",
     message:
       "Atlas delivered a clear renovation plan, practical finish guidance, and a noticeably stronger amenity presentation.",
-    image: "/images/test1.png",
+    image: "https://images.pexels.com/photos/6829569/pexels-photo-6829569.jpeg",
     alt: "Portrait of Sarah testimonial client",
   },
   {
@@ -61,7 +60,7 @@ const testimonials = [
     company: "Crestline Operations Group",
     message:
       "Their team approached our equipment upgrade with a strong understanding of performance, budget, and long-term maintenance needs.",
-    image: "/images/test2.png",
+    image: "https://images.unsplash.com/photo-1614436201459-156d322d38c6?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Portrait of Michael testimonial client",
   },
   {
@@ -69,33 +68,32 @@ const testimonials = [
     company: "Summit Hospitality Partners",
     message:
       "From consultation through delivery, Atlas brought structure, professionalism, and a finished result that elevated the entire amenity.",
-    image: "/images/test3.png",
+    image: "https://images.unsplash.com/photo-1699013703317-21c7e1513e68?q=80&w=1286&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Portrait of David testimonial client",
   },
 ];
 
 export default function Home() {
   return (
-    <main className="min-h-screen text-[#eaf4f6]">
-      <div className="pb-10">
+    <main className="min-h-screen bg-white text-slate-900">
+      <div className="pb-0">
         <SiteHeader activeLabel="Home" />
 
         <section
           id="home"
-          className="relative bg-linear-to-r from-[#1d232b] via-[#2a313a] to-[#1b2229] bg-[url('/images/hero2.png')] bg-cover bg-top-left px-4 pb-10 pt-10 sm:px-8 sm:pb-12 sm:pt-16"
+          className="relative bg-white bg-[url('https://images.pexels.com/photos/261101/pexels-photo-261101.jpeg')] bg-cover bg-top-left px-4 pb-10 pt-10 sm:px-8 sm:pb-12 sm:pt-16"
         >
-          <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-black via-black/25 to-transparent" />
+          <div className="absolute inset-0 bg-linear-to-r from-white/99 via-black/ to-transparent" />
           <div className="container mx-auto">
-            <div className="pointer-events-none absolute left-1/2 top-0 h-full w-full -translate-x-1/2 bg-[radial-gradient(circle_at_38%_28%,rgba(0,0,0,0.84)_0%,rgba(0,0,0,0.78)_28%,rgba(0,0,0,0.0)_62%)]" />
             <div className="relative z-10 max-w-5xl">
-              <h1 className="max-w-5xl uppercase text-3xl font-black leading-[0.95] text-[#f6fbfc] drop-shadow-[0_3px_4px_rgba(0,0,0,0.85)] sm:text-5xl lg:text-6xl">
-                <span className="text-2xl font-bold normal-case sm:text-3xl lg:text-4xl text-[#18a8f5]">
+              <h1 className="max-w-5xl uppercase text-3xl font-black leading-[0.95] text-slate-900 sm:text-5xl lg:text-6xl">
+                <span className="text-2xl font-bold normal-case text-[#4682B4] sm:text-3xl lg:text-4xl">
                   Atlas Pool Solutions
                 </span>
                 <br />
                 Rooftop POOL & SPA Renovations
               </h1>
-              <p className="mt-4 max-w-175 text-base leading-7 text-[#d3dbe0] sm:text-lg sm:leading-8">
+              <p className="mt-4 max-w-175 text-base leading-7 text-slate-700 sm:text-lg sm:leading-8">
                 Atlas Pool Solutions specializes in commercial rooftop pool and spa renovations for
                 properties across Greater Los Angeles and Orange County, with a focus on appearance,
                 efficiency, and long-term value.
@@ -103,7 +101,7 @@ export default function Home() {
               <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
                 <Link
                   href="/contact"
-                  className="w-full rounded-full border border-[#f06a74] bg-linear-to-b from-[#ef4b57] to-[#c92d3a] px-6 py-3 text-center text-sm font-black uppercase tracking-wide text-[#fdfcfc] shadow-[0_0_16px_rgba(230,57,70,0.45)] transition hover:brightness-105 sm:w-auto sm:px-8 sm:text-base"
+                  className="w-full rounded-full border border-[#4682B4] bg-[#4682B4] px-6 py-3 text-center text-sm font-black uppercase tracking-wide text-white shadow-[0_0_16px_rgba(70,130,180,0.35)] transition hover:brightness-105 sm:w-auto sm:px-8 sm:text-base"
                 >
                   Schedule A Pool Consultation
                 </Link>
@@ -114,18 +112,18 @@ export default function Home() {
               {serviceCards.map((card) => (
                 <article
                   key={card.title}
-                  className="rounded-2xl border border-[#4f5f6d] bg-linear-to-b from-[#2a3139]/95 to-[#20272f]/95 p-3 shadow-[0_12px_26px_rgba(0,0,0,0.35)]"
+                  className="rounded-2xl border border-[#3c73a1] bg-[#4682B4] p-3 shadow-[0_12px_26px_rgba(70,130,180,0.25)]"
                 >
-                  <div className="relative h-44 overflow-hidden rounded-xl border border-white/20">
+                  <div className="relative h-44 overflow-hidden rounded-xl border border-white/35">
                     <Image src={card.image} alt={card.alt} fill className="object-cover" />
                   </div>
                   <div className="mt-4 flex items-start gap-3">
-                    <div className="mt-1 text-[#9ec2cd]">{card.icon}</div>
+                    <div className="mt-1 text-white">{card.icon}</div>
                     <div>
-                      <h3 className="text-2xl font-black uppercase leading-tight text-[#f4fbfd] sm:text-3xl">
+                      <h3 className="text-2xl font-black uppercase leading-tight text-white sm:text-3xl">
                         {card.title}
                       </h3>
-                      <p className="mt-3 text-base leading-6 text-[#c7d2d9]">{card.body}</p>
+                      <p className="mt-3 text-base leading-6 text-white/90">{card.body}</p>
                     </div>
                   </div>
                 </article>
@@ -134,13 +132,13 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="bg-[#1b2229] px-4 pt-10 sm:px-8 sm:pt-14">
+        <section className="bg-white px-4 pt-10 sm:px-8 sm:pt-14">
           <div className="container mx-auto">
             <div className="mx-auto max-w-4xl text-center">
-              <h2 className="text-3xl font-black leading-[0.95] text-[#f0f7f8] sm:text-4xl lg:text-5xl">
+              <h2 className="text-3xl font-black leading-[0.95] text-slate-900 sm:text-4xl lg:text-5xl">
                 Built for Better Amenities
               </h2>
-              <p className="mt-4 text-base leading-7 text-[#c9d4da] sm:text-lg sm:leading-8">
+              <p className="mt-4 text-base leading-7 text-slate-700 sm:text-lg sm:leading-8">
                 We help clients upgrade finishes, improve efficiency, and create amenity spaces that
                 feel current, durable, and professionally executed.
               </p>
@@ -150,23 +148,23 @@ export default function Home() {
               {aboutCards.map((card) => (
                 <article
                   key={card.title}
-                  className="rounded-2xl border border-[#4f5f6d] bg-linear-to-br from-[#2a3139]/95 to-[#1e252d]/95 p-5 shadow-[0_16px_34px_rgba(0,0,0,0.35)]"
+                  className="rounded-2xl border border-[#3c73a1] bg-[#4682B4] p-5 shadow-[0_16px_34px_rgba(70,130,180,0.25)]"
                 >
                   <div className="flex items-start gap-4">
-                    <div className="mt-1 text-[#9ec2cd]">{card.icon}</div>
+                    <div className="mt-1 text-white">{card.icon}</div>
                     <div>
-                      <h3 className="text-2xl font-black uppercase leading-tight text-[#f4fbfd]">
+                      <h3 className="text-2xl font-black uppercase leading-tight text-white">
                         {card.title}
                       </h3>
-                      <p className="mt-3 text-base leading-7 text-[#c7d2d9]">{card.body}</p>
+                      <p className="mt-3 text-base leading-7 text-white/90">{card.body}</p>
                     </div>
                   </div>
                 </article>
               ))}
             </div>
 
-            <div className="mt-8 rounded-2xl border border-[#4f5f6d] bg-[#222b34]/95 p-5 shadow-[0_14px_30px_rgba(0,0,0,0.25)]">
-              <p className="text-base leading-7 text-[#cfd8dd] sm:text-lg">
+            <div className="mt-8 rounded-2xl border border-slate-200 bg-slate-50 p-5 shadow-[0_14px_30px_rgba(15,23,42,0.10)]">
+              <p className="text-base leading-7 text-slate-700 sm:text-lg">
                 Strong renovation planning should be matched by strong water quality standards,
                 dependable circulation, and maintenance practices that support a healthier pool
                 environment.
@@ -175,10 +173,10 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="projects" className=" bg-[#1b2229] px-4 pb-10 pt-10 sm:px-8">
+        <section id="projects" className="bg-white px-4 pb-10 pt-10 sm:px-8">
           <div className="container mx-auto">
-            <div className="grid grid-cols-1 gap-5 rounded-[18px] border border-[#495867] bg-[#252d36]/95 p-4 shadow-[0_10px_24px_rgba(0,0,0,0.25)] lg:grid-cols-12 lg:p-6">
-              <div className="relative h-64 overflow-hidden rounded-3xl border border-[#566879] shadow-inner lg:col-span-7 lg:h-auto">
+            <div className="grid grid-cols-1 gap-5 rounded-[18px] border border-slate-200 bg-slate-50 p-4 shadow-[0_10px_24px_rgba(15,23,42,0.10)] lg:grid-cols-12 lg:p-6">
+              <div className="relative h-64 overflow-hidden rounded-3xl border border-slate-200 shadow-inner lg:col-span-7 lg:h-auto">
                 <Image
                   src="/images/clean_features.png"
                   alt="Rooftop luxury pool development with deck and seating"
@@ -187,16 +185,16 @@ export default function Home() {
                 />
               </div>
               <div className="flex flex-col justify-center px-1 py-1 sm:px-2 sm:py-2 lg:col-span-5">
-                <h2 className="text-3xl font-black leading-[0.95] text-[#f0f7f8] sm:text-4xl lg:text-5xl">
+                <h2 className="text-3xl font-black leading-[0.95] text-slate-900 sm:text-4xl lg:text-5xl">
                   Strategic Upgrades For High-Use Amenities
                 </h2>
-                <p className="mt-4 text-base leading-7 text-[#c9d4da] sm:text-lg sm:leading-8 lg:text-2xl">
+                <p className="mt-4 text-base leading-7 text-slate-700 sm:text-lg sm:leading-8 lg:text-2xl">
                   We combine finish upgrades, system improvements, and practical planning to create
                   cleaner, more efficient, and more compelling commercial pool environments.
                 </p>
                 <Link
                   href="/case-studies"
-                  className="mt-6 w-full rounded-full border border-[#f06a74] bg-linear-to-b from-[#ef4b57] to-[#c92d3a] px-6 py-3 text-center text-base font-black uppercase tracking-wide text-[#ffffff] shadow-[0_0_14px_rgba(230,57,70,0.4)] sm:w-fit sm:px-10 sm:text-lg"
+                  className="mt-6 w-full rounded-full border border-[#4682B4] bg-[#4682B4] px-6 py-3 text-center text-base font-black uppercase tracking-wide text-white shadow-[0_0_14px_rgba(70,130,180,0.30)] sm:w-fit sm:px-10 sm:text-lg"
                 >
                   Explore Case Studies
                 </Link>
@@ -212,23 +210,23 @@ export default function Home() {
               {testimonials.map((item) => (
                 <article
                   key={item.name}
-                  className="flex h-full flex-col rounded-2xl border border-[#4f5f6d] bg-[#242d36]/95 p-3"
+                  className="flex h-full flex-col rounded-2xl border border-[#3c73a1] bg-[#4682B4] p-3"
                 >
                   <div className="relative h-64 overflow-hidden rounded-xl">
                     <Image src={item.image} alt={item.alt} fill className="object-cover" />
                   </div>
-                  <div className="-mt-3 flex flex-1 flex-col rounded-b-2xl border border-[#566879] bg-linear-to-br from-[#2a3139]/95 to-[#1e252d]/95 p-4 pt-8 shadow-[0_10px_25px_rgba(0,0,0,0.45)]">
-                    <p className="min-h-28 text-lg leading-7 text-[#d7dee2] italic sm:min-h-32">
+                  <div className="-mt-3 flex flex-1 flex-col rounded-b-2xl border border-white/35 bg-[#4682B4] p-4 pt-8 shadow-[0_10px_25px_rgba(70,130,180,0.30)]">
+                    <p className="min-h-28 text-lg leading-7 text-white/90 italic sm:min-h-32">
                       &ldquo;{item.message}&rdquo;
                     </p>
-                    <div className="mt-auto flex items-end justify-between gap-3 text-[#9ec2cd]">
+                    <div className="mt-auto flex items-end justify-between gap-3 text-white/90">
                       <div className="min-w-0">
-                        <p className="text-lg font-black text-[#f4fbfd] sm:text-2xl">{item.name}</p>
-                        <p className="mt-1 text-xs font-semibold uppercase tracking-[0.14em] text-[#9ec2cd] sm:text-sm">
+                        <p className="text-lg font-black text-white sm:text-2xl">{item.name}</p>
+                        <p className="mt-1 text-xs font-semibold uppercase tracking-[0.14em] text-white/80 sm:text-sm">
                           {item.company}
                         </p>
                       </div>
-                      <div className="flex items-center gap-1 text-[#f1d2a7]">
+                      <div className="flex items-center gap-1 text-[#fef3c7]">
                         {Array.from({ length: 5 }).map((_, i) => (
                           <Star
                             key={i}
@@ -246,8 +244,8 @@ export default function Home() {
         </section>
         <section>
           <div className="container mx-auto px-3">
-            <div className="flex py-8 flex-col gap-4 border-b border-[#3f4b57] sm:flex-row sm:items-center">
-              <div className="relative h-28 w-28 overflow-hidden rounded-xl border border-[#566879]">
+            <div className="flex flex-col gap-4 border-b border-slate-200 py-8 sm:flex-row sm:items-center">
+              <div className="relative h-28 w-28 overflow-hidden rounded-xl border border-slate-200">
                 <Image
                   src="/images/test3.png"
                   alt="Founder Tony Harris portrait"
@@ -256,10 +254,10 @@ export default function Home() {
                 />
               </div>
               <div id="contact">
-                <h3 className="text-2xl font-semibold text-[#f0f7f8] sm:text-3xl lg:text-4xl">
+                <h3 className="text-2xl font-semibold text-slate-900 sm:text-3xl lg:text-4xl">
                   Built For Commercial Properties
                 </h3>
-                <p className="mt-1 max-w-7xl text-base leading-7 text-[#cfd8dd] sm:text-lg sm:leading-8 lg:text-2xl">
+                <p className="mt-1 max-w-7xl text-base leading-7 text-slate-700 sm:text-lg sm:leading-8 lg:text-2xl">
                   We help owners and managers improve pool, spa, and deck amenities with renovation
                   solutions that balance presentation, performance, and operational efficiency.
                 </p>
@@ -275,7 +273,7 @@ export default function Home() {
 
 function IconFrame({ children }: { children: ReactNode }) {
   return (
-    <span className="grid h-12 w-12 shrink-0 place-items-center rounded-md border border-[#61717f] bg-[#2a3139]/90">
+    <span className="grid h-12 w-12 shrink-0 place-items-center rounded-md border border-white/35 bg-white/15">
       {children}
     </span>
   );

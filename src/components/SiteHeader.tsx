@@ -26,34 +26,34 @@ export default function SiteHeader({ activeLabel }: { activeLabel?: string }) {
   const closeMenu = () => setIsMobileMenuOpen(false);
 
   return (
-    <header className="relative rounded-t-md border-b border-slate-200 bg-white px-4 py-4 sm:px-8">
-      <div className="container mx-auto flex items-center justify-between gap-4 lg:gap-5">
+    <header className="px-4 pt-1">
+      <div className="container mx-auto flex items-center justify-between gap-4  bg-linear-to-r from-[#222831] via-[#2c333c] to-[#232a33] px-3 py-0  sm:px-5">
         <Link
           href="/"
-          className="flex min-w-0 flex-1 items-center gap-3 sm:gap-4"
-          aria-label="Atlas Pool Solutions"
+          className="flex min-w-0 flex-1 items-center gap-2 sm:gap-3"
+          aria-label="Run Like A Girl"
         >
-          <div className="relative h-16 w-16 overflow-hidden rounded-sm border border-slate-200 bg-white p-1 shadow-[0_10px_24px_rgba(15,23,42,0.10)] sm:h-20 sm:w-20">
+          <div className="relative h-16 w-16 overflow-hidden rounded-md bg-transparent sm:h-20 sm:w-20">
             <Image
-              src="/images/logo.png"
-              alt="Atlas Pool Solutions logo"
+              src="/new/logo-girl.png"
+              alt="Run Like A Girl logo"
               fill
               className="object-contain"
               priority
             />
           </div>
-          <div className="min-w-0">
-            <h2 className="text-lg font-bold uppercase leading-none tracking-[0.04em] text-[#1f252d] sm:text-xl lg:text-2xl">
-              <span className="block whitespace-nowrap">ATLAS POOL SOLUTIONS</span>
+          {/* <div className="min-w-0">
+            <h2 className="text-base font-black uppercase leading-none tracking-[0.04em] text-white sm:text-lg lg:text-xl">
+              <span className="block whitespace-nowrap">RUN LIKE A GIRL</span>
             </h2>
            
-          </div>
+          </div> */}
         </Link>
 
         <button
           type="button"
           onClick={() => setIsMobileMenuOpen(true)}
-          className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white p-3 text-[#1f252d] shadow-[0_10px_24px_rgba(15,23,42,0.08)] transition hover:bg-slate-50 sm:hidden"
+          className="inline-flex items-center justify-center rounded-full border border-white/25 bg-white/10 p-3 text-white transition hover:bg-white/20 sm:hidden"
           aria-label="Open navigation menu"
           aria-expanded={isMobileMenuOpen}
         >
@@ -61,16 +61,16 @@ export default function SiteHeader({ activeLabel }: { activeLabel?: string }) {
         </button>
 
         <nav className="hidden shrink-0 sm:block sm:w-auto" aria-label="Primary navigation">
-          <ul className="flex flex-wrap justify-end gap-5 text-[15px] font-semibold text-[#1f252d] lg:gap-8">
+          <div className="flex flex-wrap items-center justify-end gap-5 text-[14px] font-black uppercase tracking-[0.05em] text-white lg:gap-8">
             {siteNav.map((item) => {
               const isActive = item.label === activeLabel;
               return (
-                <li key={item.href} className="cursor-pointer">
+                <li key={item.href} className="cursor-pointer list-none">
                   <Link
                     href={item.href}
                     className={[
-                      "transition hover:text-[#e63946]",
-                      isActive ? "text-[#e63946]" : "",
+                      "transition hover:text-[#f0d07a]",
+                      isActive ? "text-[#f0d07a]" : "",
                     ].join(" ")}
                     aria-current={isActive ? "page" : undefined}
                   >
@@ -79,7 +79,13 @@ export default function SiteHeader({ activeLabel }: { activeLabel?: string }) {
                 </li>
               );
             })}
-          </ul>
+            <Link
+              href="/contact"
+              className="rounded-full border border-[#1f7f56] bg-[#1c9a64] px-5 py-2 text-[#f7d96f] shadow-[0_8px_20px_rgba(0,0,0,0.35)] transition hover:brightness-110"
+            >
+              Register Now
+            </Link>
+          </div>
         </nav>
       </div>
 
@@ -94,17 +100,17 @@ export default function SiteHeader({ activeLabel }: { activeLabel?: string }) {
 
       <div
         className={[
-          "fixed right-0 top-0 z-50 h-full w-[84vw] max-w-sm border-l border-slate-200 bg-white shadow-[-18px_0_45px_rgba(15,23,42,0.22)] transition-transform duration-300 ease-out sm:hidden",
+          "fixed right-0 top-0 z-50 h-full w-[84vw] max-w-sm border-l border-white/20 bg-[#1f252d] shadow-[-18px_0_45px_rgba(0,0,0,0.5)] transition-transform duration-300 ease-out sm:hidden",
           isMobileMenuOpen ? "translate-x-0" : "translate-x-full",
         ].join(" ")}
         aria-hidden={!isMobileMenuOpen}
       >
-        <div className="flex items-center justify-between border-b border-slate-200 px-5 py-5">
-          <p className="text-sm font-black uppercase tracking-[0.18em] text-[#1f252d]">Menu</p>
+        <div className="flex items-center justify-between border-b border-white/15 px-5 py-5">
+          <p className="text-sm font-black uppercase tracking-[0.18em] text-white">Menu</p>
           <button
             type="button"
             onClick={closeMenu}
-            className="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white p-2 text-[#1f252d] transition hover:bg-slate-50"
+            className="inline-flex items-center justify-center rounded-full border border-white/25 bg-white/10 p-2 text-white transition hover:bg-white/20"
             aria-label="Close navigation menu"
           >
             <X className="h-5 w-5" strokeWidth={2.4} />
@@ -112,7 +118,7 @@ export default function SiteHeader({ activeLabel }: { activeLabel?: string }) {
         </div>
 
         <nav className="px-5 py-6" aria-label="Mobile navigation">
-          <ul className="space-y-2 text-base font-black uppercase tracking-[0.12em] text-[#1f252d]">
+          <ul className="space-y-2 text-base font-black uppercase tracking-[0.12em] text-white">
             {siteNav.map((item) => {
               const isActive = item.label === activeLabel;
               return (
@@ -121,8 +127,8 @@ export default function SiteHeader({ activeLabel }: { activeLabel?: string }) {
                     href={item.href}
                     onClick={closeMenu}
                     className={[
-                      "block rounded-2xl border border-slate-200 bg-white px-4 py-4 transition hover:border-[#e63946]/45 hover:text-[#e63946]",
-                      isActive ? "border-[#e63946]/55 text-[#e63946]" : "",
+                      "block rounded-2xl border border-white/20 bg-white/5 px-4 py-4 transition hover:border-[#f0d07a]/45 hover:text-[#f0d07a]",
+                      isActive ? "border-[#f0d07a]/55 text-[#f0d07a]" : "",
                     ].join(" ")}
                     aria-current={isActive ? "page" : undefined}
                   >
@@ -131,6 +137,15 @@ export default function SiteHeader({ activeLabel }: { activeLabel?: string }) {
                 </li>
               );
             })}
+            <li>
+              <Link
+                href="/contact"
+                onClick={closeMenu}
+                className="block rounded-2xl border border-[#1f7f56] bg-[#1c9a64] px-4 py-4 text-[#f7d96f] transition hover:brightness-110"
+              >
+                Register Now
+              </Link>
+            </li>
           </ul>
         </nav>
       </div>

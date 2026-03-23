@@ -5,47 +5,45 @@ export type SiteNavItem = {
 
 export const siteNav: SiteNavItem[] = [
   { label: "Home", href: "/" },
+  { label: "Events", href: "/services" },
+  { label: "Maps", href: "/maps" },
   { label: "About", href: "/about" },
-  { label: "Services", href: "/services" },
-  { label: "Case Studies", href: "/case-studies" },
+  { label: "Race Day", href: "/case-studies" },
+  { label: "Sponsors", href: "/sponsors" },
   { label: "Contact", href: "/contact" },
 ];
 
 export const siteContact = {
-  emailShowroom: "showroom@atlaspoolsolutions.com",
-  emailOperations: "operations@atlaspoolsolutions.com",
-  phone: "310.341.6123",
-  phoneHref: "tel:13103416123",
+  emailShowroom: "info@runlikeagirlOH.org",
+  emailOperations: "info@runlikeagirlOH.org",
+  phone: "(614) 555-RUNS",
+  phoneHref: "tel:+16145557867",
   addressLines: [
-    "Atlas Pool Solutions, Inc",
-    "3693 San Gabriel River Parkway,",
-    "Pico Rivera, California 90660, United States",
+    "Westerville Athletic Complex,",
+    "325 N. Cleveland Ave,",
+    "Westerville, OH 43081",
   ],
   directionsHref:
-    "https://www.google.com/maps/search/?api=1&query=3693+San+Gabriel+River+Parkway+Pico+Rivera+California+90660",
+    "https://www.google.com/maps/search/?api=1&query=325+N.+Cleveland+Ave,+Westerville,+OH+43081",
   businessHours: [
-    "Monday - 9:00am to 5:00pm",
-    "Tuesday - 9:00am to 5:00pm",
-    "Wednesday - 9:00am to 5:00pm",
-    "Thursday - 9:00am to 5:00pm",
-    "Friday - 9:00am to 5:00pm",
-    "Saturday - Closed",
-    "Sunday - Closed",
+    "Packet pickup - Saturday, Sept 20 | 10:00am to 1:00pm",
+    "Packet pickup - Saturday, Sept 27 | 10:00am to 1:00pm",
+    "Race day - Sunday, Oct 04 | Start 9:00am",
   ],
   socials: [
     {
       label: "Facebook",
-      href: "https://www.facebook.com/atlaspoolsolutions",
+      href: "https://www.facebook.com/runlikeagirlOH",
       key: "facebook",
     },
     {
       label: "Instagram",
-      href: "https://www.instagram.com/atlaspoolsolutions",
+      href: "https://www.instagram.com/runlikeagirlOH",
       key: "instagram",
     },
     {
       label: "X (Twitter)",
-      href: "https://x.com/atlaspoolsolutions",
+      href: "https://x.com/runlikeagirlOH",
       key: "x",
     },
   ],

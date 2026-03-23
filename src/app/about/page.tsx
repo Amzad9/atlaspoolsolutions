@@ -1,441 +1,154 @@
 import type { Metadata } from "next";
-import type { ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { Heart, Sparkles, Users } from "lucide-react";
 
-import SiteFooter from "../../components/SiteFooter";
-import SiteHeader from "../../components/SiteHeader";
+import PageShell from "../../components/PageShell";
 
 export const metadata: Metadata = {
-  title: "About Us | Atlas Pool Solutions",
-  description:
-    "Learn more about Atlas Pool Solutions: commercial rooftop pool and spa renovations serving Greater Los Angeles and Orange County.",
+  title: "About | Run Like A Girl",
+  description: "Learn about Run Like A Girl and the All-Women’s Fall Classic in Westerville, Ohio.",
 };
 
-const aboutCards = [
+const values = [
   {
-    title: "What We Do",
-    body: "Atlas Pool Solutions serves Greater Los Angeles and Orange County with renovation planning and construction support for commercial pools, spas, decks, fountains, waterfalls, and water features.",
-    icon: <CompassIcon />,
+    title: "Community First",
+    body: "A race day atmosphere built on encouragement, friendly competition, and shared goals.",
+    icon: <Users className="h-5 w-5" strokeWidth={2.2} />,
   },
   {
-    title: "Why We Do It",
-    body: "Well-executed renovations improve more than appearance. They strengthen the overall amenity experience, modernize performance, and help properties present a more valuable, better maintained environment.",
-    icon: <SparkIcon />,
+    title: "Celebrate Every Finish",
+    body: "Whether it’s your first 5K or your fastest 10-Mile, we celebrate the work you put in.",
+    icon: <Sparkles className="h-5 w-5" strokeWidth={2.2} />,
   },
   {
-    title: "Why Choose Us",
-    body: "We combine practical project guidance, finish expertise, and equipment knowledge to help clients move from concept to execution with a scope that fits their operational goals and budget.",
-    icon: <ShieldIcon />,
-  },
-];
-
-const differenceCards = [
-  {
-    title: "Fiberglass Pools",
-    body: "Fiberglass solutions offer a durable, low-maintenance option for properties seeking reliable performance and a streamlined finish approach.",
-    image: "/abouts/img1.png",
-    alt: "Pool water and deck finish example",
-  },
-  {
-    title: "Concrete Pools",
-    body: "Concrete pool solutions support flexible layouts, custom detailing, and long-term durability across a wide range of commercial applications.",
-    image: "/abouts/img2.png",
-    alt: "Pool design planning and drafting board",
-  },
-  {
-    title: "Pool Renovations",
-    body: "From targeted upgrades to full amenity repositioning, our renovation work is built to improve both presentation and performance.",
-    image: "/abouts/img3.png",
-    alt: "Commercial pool equipment and modernization",
-  },
-  {
-    title: "Pool Financing",
-    body: "For projects requiring additional planning support, our team can discuss options and next steps during the consultation process.",
-    image: "/abouts/img4.png",
-    alt: "Luxury rooftop pool amenity space",
-  },
-  {
-    title: "Pool Maintenance Plans",
-    body: "Maintenance planning helps keep pools and spas clean, consistent, and ready for daily use while reducing avoidable operational issues.",
-    image: "/abouts/img5.png",
-    alt: "Rooftop pool and spa setting",
-  },
-];
-
-const processSteps = [
-  {
-    title: "Step 1: Project Design and Approval",
-    body: "We begin with an initial meeting to understand the project goals, design priorities, and operational needs. A detailed site review follows, and a preliminary plan with budget guidance is prepared for review.",
-  },
-  {
-    title: "Step 2: Permitting and Engineering",
-    body: "We coordinate permitting, engineering, and required inspections while ensuring the project aligns with local and state code requirements before construction begins.",
-  },
-  {
-    title: "Step 3: Layout",
-    body: "After approvals are in place, the construction team reviews the site layout and establishes project positioning to confirm accurate placement and staging.",
-  },
-  {
-    title: "Step 4: Excavation",
-    body: "Once layout is confirmed, excavation begins in preparation for structural work.",
-  },
-  {
-    title: "Step 5: Structural Steel",
-    body: "The shell is reinforced with structural steel according to engineering requirements, followed by the appropriate inspection process.",
-  },
-  {
-    title: "Step 6: Rough Plumb",
-    body: "Rough plumbing follows steel installation, including drains, skimmers, returns, light niches, and any required pre-plumbing for attached features.",
-  },
-  {
-    title: "Step 7: Gunite",
-    body: "The shell is formed using the appropriate structural concrete application to create the pool floor, walls, and core vessel shape.",
-  },
-  {
-    title: "Step 8: Plumbing",
-    body: "The circulation and plumbing system is designed to support effective filtration, dependable performance, and efficient long-term operation.",
-  },
-  {
-    title: "Step 9: Tile",
-    body: "Tile selections are installed to align with the design direction, material palette, and visual character of the finished amenity.",
-  },
-  {
-    title: "Step 10: Equipment Set",
-    body: "Filtration equipment, pumps, and related components are set in place to support the required circulation and feature systems.",
-  },
-  {
-    title: "Step 11: Electric",
-    body: "Electrical work is coordinated for lighting, controls, and equipment power, with gas service routed where heating systems are required.",
-  },
-  {
-    title: "Step 12: Deck",
-    body: "Decking and coping are completed to support the design concept, material selection, and overall finish quality of the project.",
-  },
-  {
-    title: "Step 13: Site Clean Up",
-    body: "The site is cleared of excess materials and prepared for the final finish stages.",
-  },
-  {
-    title: "Step 14: Pool Interior",
-    body: "The interior finish is applied based on the selected material, giving the water its final appearance and preparing the vessel for startup.",
-  },
-  {
-    title: "Step 15: Fire Up and Orientation",
-    body: "After startup, the system is reviewed, equipment is commissioned, and a final orientation is provided to support operations, maintenance, and ongoing use.",
+    title: "Give Back Locally",
+    body: "Your participation supports a local non-profit partner and helps our community thrive.",
+    icon: <Heart className="h-5 w-5" strokeWidth={2.2} />,
   },
 ];
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-white text-slate-900">
-      <div className="pb-0">
-        <SiteHeader activeLabel="About" />
+    <PageShell
+      activeLabel="About"
+      hero={{
+        eyebrow: "About",
+        title: (
+          <>
+            Run Like A Girl
+            <br />
+            All-Women’s Fall Classic
+          </>
+        ),
+        subtitle:
+          "We’re building a welcoming, high-energy race day that brings women together to run, connect, and celebrate what’s possible.",
+        imageUrl: "https://images.pexels.com/photos/1571939/pexels-photo-1571939.jpeg",
+      }}
+    >
+      <section className="px-4 py-10 sm:px-8 sm:py-14">
+        <div className="container mx-auto grid gap-6 lg:grid-cols-12">
+          <div className="lg:col-span-7">
+            <h2 className="text-3xl font-black uppercase tracking-tight text-[#f3d27d] sm:text-5xl">
+              Our Mission
+            </h2>
+            <p className="mt-4 text-base leading-7 text-white/90 sm:text-lg sm:leading-8">
+              Run Like A Girl exists to create an empowering event experience for women of all
+              abilities—elite runners, weekend warriors, and first-timers. We believe the best race
+              days feel inclusive, organized, and full of community support.
+            </p>
+            <p className="mt-4 text-base leading-7 text-white/90 sm:text-lg sm:leading-8">
+              With 5K, 10K, and 10-Mile options, you can choose your challenge and show up as you
+              are. Come chase a PR, run with friends, or take that first brave step into the start
+              corral.
+            </p>
 
-        <section className="relative bg-white bg-[url('/abouts/banner-abouts.png')] bg-cover bg-center px-4 min-h-[600px] pb-12 pt-10 sm:px-8 sm:pb-16 sm:pt-16">
-        <div className="absolute inset-0 bg-linear-to-r from-white/99 via-black/ to-transparent" />
-
-          <div className="container mx-auto">
-            <div className="relative z-10 max-w-4xl">
-              <p className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/70 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#1f252d] shadow-[0_10px_24px_rgba(15,23,42,0.08)] sm:text-sm">
-                ATLAS POOL SOLUTIONS CA #990127
-              </p>
-
-              <h2 className="mt-5 text-4xl font-black uppercase leading-[0.9] text-slate-900 sm:text-6xl lg:text-6xl">
-                About
-                <br />
-                Atlas Pool Solutions
-              </h2>
-              <p className="mt-5 max-w-2xl text-base leading-7 text-slate-700 sm:text-lg sm:leading-8">
-                Atlas Pool Solutions provides commercial pool and spa renovation expertise for
-                properties across Greater Los Angeles and Orange County.
-              </p>
-
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
-                <Link
-                  href="/contact"
-                  className="w-full rounded-full border border-[#4682B4] bg-[#4682B4] px-6 py-3 text-center text-sm font-black uppercase tracking-wide text-white shadow-[0_0_16px_rgba(70,130,180,0.35)] transition hover:brightness-105 sm:w-auto sm:px-8 sm:text-base"
-                >
-                  Book A Consultation
-                </Link>
-                <Link
-                  href="/case-studies"
-                  className="w-full rounded-full border border-slate-200 bg-white px-6 py-3 text-center text-sm font-black uppercase tracking-wide text-[#1f252d] shadow-[0_10px_24px_rgba(15,23,42,0.08)] transition hover:bg-slate-50 sm:w-auto sm:px-8 sm:text-base"
-                >
-                  View Case Studies
-                </Link>
-              </div>
+            <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center rounded-full border border-[#1f7f56] bg-[#1c9a64] px-8 py-3 text-center text-sm font-black uppercase tracking-wide text-[#f7d96f] shadow-[0_10px_25px_rgba(0,0,0,0.45)] transition hover:brightness-110 sm:w-fit sm:text-base"
+              >
+                Contact Us
+              </Link>
+              <Link
+                href="/services"
+                className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/10 px-8 py-3 text-center text-sm font-black uppercase tracking-wide text-white transition hover:bg-white/15 sm:w-fit sm:text-base"
+              >
+                View Event Details
+              </Link>
             </div>
           </div>
-        </section>
 
-        <section className="bg-white px-4 pt-10 sm:px-8 sm:pt-14">
-          <div className="container mx-auto">
-            <div className="mx-auto max-w-4xl text-center">
-              <h2 className="text-3xl font-black leading-[0.95] text-slate-900 sm:text-4xl lg:text-5xl">
-                Built for Better Amenities
-              </h2>
-              <p className="mt-4 text-base leading-7 text-slate-700 sm:text-lg sm:leading-8">
-                We help clients upgrade finishes, improve efficiency, and create amenity spaces that
-                feel current, durable, and professionally executed.
-              </p>
-            </div>
-
-            <div className="mt-10 grid gap-5 lg:grid-cols-3">
-              {aboutCards.map((card) => (
-                <article
-                  key={card.title}
-                  className="rounded-2xl border border-[#3c73a1] bg-[#4682B4] p-5 shadow-[0_16px_34px_rgba(70,130,180,0.25)]"
-                >
-                  <div className="flex items-start gap-4">
-                    <div className="mt-1 text-white">{card.icon}</div>
-                    <div>
-                      <h3 className="text-2xl font-black uppercase leading-tight text-white">
-                        {card.title}
-                      </h3>
-                      <p className="mt-3 text-base leading-7 text-white/90">{card.body}</p>
-                    </div>
-                  </div>
-                </article>
-              ))}
-            </div>
-
-            <div className="mt-8 rounded-2xl border border-slate-200 bg-slate-50 p-5 shadow-[0_14px_30px_rgba(15,23,42,0.10)]">
-              <p className="text-base leading-7 text-slate-700 sm:text-lg">
-                Strong renovation planning should be matched by strong water quality standards,
-                dependable circulation, and maintenance practices that support a healthier pool
-                environment.
-              </p>
+          <div className="lg:col-span-5">
+            <div className="relative min-h-[280px] overflow-hidden rounded-3xl border border-white/15 bg-white/5 shadow-[0_18px_44px_rgba(0,0,0,0.30)] sm:min-h-[360px]">
+              <Image
+                src="https://images.pexels.com/photos/3755440/pexels-photo-3755440.jpeg"
+                alt="Women runners at the finish line"
+                fill
+                className="object-cover"
+              />
+              <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-black/45 via-transparent to-transparent" />
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section className="bg-white px-4 py-10 sm:px-8">
-          <div className="container mx-auto">
-            <div className="grid gap-6 rounded-[22px] border border-slate-200 bg-slate-50 p-5 shadow-[0_18px_44px_rgba(15,23,42,0.10)] lg:grid-cols-12 lg:p-7">
-              <div className="lg:col-span-5">
-                <h2 className="text-3xl font-black leading-[0.95] text-slate-900 sm:text-4xl">
-                  Renovations, Decks & Water Features
-                </h2>
-                <p className="mt-4 text-base leading-8 text-slate-700 sm:text-lg">
-                  We provide consulting appointments to help define the right renovation strategy
-                  for each property and budget. Our work also includes decks, fountains,
-                  waterfalls, water features, and other water-driven amenity elements.
+      <section className="bg-[#1e252d] px-4 py-10 sm:px-8 sm:py-14">
+        <div className="container mx-auto">
+          <h2 className="text-3xl font-black uppercase tracking-tight text-[#f3d27d] sm:text-5xl">
+            What You Can Expect
+          </h2>
+          <div className="mt-6 grid gap-6 md:grid-cols-3">
+            {values.map((item) => (
+              <article
+                key={item.title}
+                className="rounded-2xl border border-white/15 bg-white/5 p-6 shadow-[0_14px_30px_rgba(0,0,0,0.20)]"
+              >
+                <span className="inline-flex rounded-full border border-white/15 bg-white/5 p-3 text-[#f3d27d]">
+                  {item.icon}
+                </span>
+                <h3 className="mt-4 text-2xl font-black uppercase tracking-tight text-white">
+                  {item.title}
+                </h3>
+                <p className="mt-3 text-base leading-7 text-white/85 sm:text-lg sm:leading-8">
+                  {item.body}
                 </p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
 
-                <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-                  <Link
-                    href="/contact"
-                    className="w-full rounded-full border border-[#4682B4] bg-[#4682B4] px-6 py-3 text-center text-sm font-black uppercase tracking-wide text-white shadow-[0_0_14px_rgba(70,130,180,0.30)] transition hover:brightness-105 sm:w-fit"
-                  >
-                    Schedule A Showroom Visit
-                  </Link>
-                </div>
-              </div>
-
-              <div className="relative h-64 overflow-hidden rounded-3xl border border-slate-200 shadow-inner lg:col-span-7 lg:h-auto">
-                <Image
-                  src="/images/clean_features.png"
-                  alt="Pool amenity renovation with modern finishes"
-                  fill
-                  className="object-cover"
-                />
-              </div>
+      <section className="px-4 pb-12 pt-10 sm:px-8 sm:pb-16 sm:pt-14">
+        <div className="container mx-auto">
+          <div className="rounded-[24px] border border-white/15 bg-white/5 p-6 shadow-[0_18px_44px_rgba(0,0,0,0.25)] sm:p-8">
+            <p className="text-sm font-semibold uppercase tracking-[0.18em] text-white/85">
+              Ready?
+            </p>
+            <h2 className="mt-3 text-3xl font-black tracking-tight text-white sm:text-4xl">
+              Let’s make race day unforgettable.
+            </h2>
+            <p className="mt-3 max-w-3xl text-base leading-7 text-white/85 sm:text-lg sm:leading-8">
+              If you’re registering, sponsoring, volunteering, or just have a question, reach out—we’ll help you get set.
+            </p>
+            <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center rounded-full border border-[#1f7f56] bg-[#1c9a64] px-8 py-3 text-center text-sm font-black uppercase tracking-wide text-[#f7d96f] shadow-[0_10px_25px_rgba(0,0,0,0.45)] transition hover:brightness-110 sm:w-fit sm:text-base"
+              >
+                Get In Touch
+              </Link>
+              <Link
+                href="/"
+                className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/10 px-8 py-3 text-center text-sm font-black uppercase tracking-wide text-white transition hover:bg-white/15 sm:w-fit sm:text-base"
+              >
+                Back To Home
+              </Link>
             </div>
           </div>
-        </section>
-
-        <section className="bg-white px-4 py-10 sm:px-8">
-          <div className="container mx-auto">
-            <div className="mx-auto max-w-4xl text-center">
-              <h2 className="text-2xl font-black leading-none text-slate-900 sm:text-3xl lg:text-4xl">
-                Experience the Difference of Atlas
-              </h2>
-              <p className="mt-4 text-base leading-7 text-slate-700 sm:text-lg sm:leading-8">
-                From renovations to maintenance planning, our team helps clients create pool
-                environments that are efficient, attractive, and easier to manage over time.
-              </p>
-            </div>
-
-            <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
-              {differenceCards.map((card) => (
-                <article
-                  key={card.title}
-                  className="group rounded-2xl border border-[#3c73a1] bg-[#4682B4] p-3 shadow-[0_12px_26px_rgba(70,130,180,0.22)] lg:col-span-1"
-                >
-                  <div className="relative h-40 overflow-hidden rounded-xl border border-white/35">
-                    <Image
-                      src={card.image}
-                      alt={card.alt}
-                      fill
-                      className="object-cover transition duration-500 group-hover:scale-[1.03]"
-                    />
-                  </div>
-                  <div className="mt-4">
-                    <h3 className="text-md font-black uppercase leading-tight text-white">
-                      {card.title}
-                    </h3>
-                    <p className="mt-2 text-sm leading-6 text-white/90">{card.body}</p>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="bg-white px-4 py-10 sm:px-8">
-          <div className="container mx-auto">
-            <div className="mx-auto max-w-4xl text-center">
-              <h2 className="text-3xl font-black leading-[0.95] text-slate-900 sm:text-4xl lg:text-5xl">
-                The New Pool Construction Process
-              </h2>
-              <p className="mt-4 text-base leading-7 text-slate-700 sm:text-lg sm:leading-8">
-                Our process is designed to keep planning, approvals, construction, and turnover
-                organized from the first meeting through final orientation.
-              </p>
-            </div>
-
-            <div className="mt-10 grid gap-4">
-              {processSteps.map((step) => (
-                <details
-                  key={step.title}
-                  className="group rounded-2xl border border-slate-200 bg-slate-50 p-5 shadow-[0_10px_24px_rgba(15,23,42,0.10)]"
-                >
-                  <summary className="cursor-pointer list-none">
-                    <div className="flex items-start justify-between gap-4">
-                      <div>
-                        <p className="text-lg font-black text-slate-900 sm:text-xl">{step.title}</p>
-                      </div>
-                      <span className="mt-1 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-slate-200 bg-white text-sm font-black text-slate-700 transition group-open:rotate-45">
-                        +
-                      </span>
-                    </div>
-                  </summary>
-                  <p className="mt-3 text-base leading-7 text-slate-700">{step.body}</p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="bg-white px-4 py-10 sm:px-8">
-          <div className="container mx-auto">
-            <div className="grid gap-6 rounded-[22px] border border-slate-200 bg-slate-50 p-6 shadow-[0_18px_44px_rgba(15,23,42,0.10)] lg:grid-cols-12 lg:p-8">
-              <div className="lg:col-span-7">
-                <h2 className="text-2xl font-black leading-[0.95] text-slate-900 sm:text-4xl">
-                  Better yet, Call, Text, or Visit Us
-                </h2>
-                <p className="mt-4 text-base leading-7 text-slate-700 sm:text-lg sm:leading-8">
-                  Contact Atlas Pool Solutions to discuss renovation priorities, showroom meetings,
-                  and the next steps for your property.
-                </p>
-
-                <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-                  <Link
-                    href="/contact"
-                    className="w-full rounded-full border border-[#4682B4] bg-[#4682B4] px-6 py-3 text-center text-sm font-black uppercase tracking-wide text-white shadow-[0_0_14px_rgba(70,130,180,0.30)] transition hover:brightness-105 sm:w-fit sm:px-8 sm:text-base"
-                  >
-                    Contact Atlas
-                  </Link>
-                  <a
-                    href="tel:13103416123"
-                    className="w-full rounded-full border border-slate-200 bg-white px-6 py-3 text-center text-sm font-black uppercase tracking-wide text-[#1f252d] shadow-[0_10px_24px_rgba(15,23,42,0.08)] transition hover:bg-slate-50 sm:w-fit sm:px-8 sm:text-base"
-                  >
-                    Call 310.341.6123
-                  </a>
-                </div>
-              </div>
-
-              <div className="relative overflow-hidden rounded-3xl border border-slate-200 bg-white p-5 shadow-inner lg:col-span-5">
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(70,130,180,0.18)_0%,rgba(255,255,255,0)_60%)]" />
-                <div className="relative">
-                  <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[#4682B4]">
-                    Showroom
-                  </p>
-                  <p className="mt-2 text-lg font-black text-slate-900">
-                    Atlas Pool Solutions, Inc
-                  </p>
-                  <p className="mt-2 text-base leading-7 text-slate-700">
-                    3693 San Gabriel River Parkway,
-                    <br />
-                    Pico Rivera, California 90660, United States
-                  </p>
-                  <p className="mt-4 text-base leading-7 text-slate-700">
-                    showroom@atlaspoolsolutions.com
-                    <br />
-                    310.341.6123
-                  </p>
-                  <p className="mt-4 text-sm leading-6 text-slate-700">
-                    For work orders for current clients, please contact us at
-                    Operations@atlaspoolsolutions.com at any time.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <SiteFooter />
-      </div>
-    </main>
+        </div>
+      </section>
+    </PageShell>
   );
 }
 
-function IconFrame({ children }: { children: ReactNode }) {
-  return (
-    <span className="grid h-12 w-12 shrink-0 place-items-center rounded-md border border-white/35 bg-white/15">
-      {children}
-    </span>
-  );
-}
-
-function CompassIcon() {
-  return (
-    <IconFrame>
-      <svg
-        viewBox="0 0 24 24"
-        className="h-7 w-7"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.8"
-      >
-        <circle cx="12" cy="12" r="9" />
-        <path d="M14.8 9.2 13 13l-3.8 1.8L11 11z" />
-      </svg>
-    </IconFrame>
-  );
-}
-
-function SparkIcon() {
-  return (
-    <IconFrame>
-      <svg
-        viewBox="0 0 24 24"
-        className="h-7 w-7"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.8"
-      >
-        <path d="M12 2v6M12 16v6M4 12h6M14 12h6" />
-        <path d="M6.2 6.2 10 10M14 14l3.8 3.8M17.8 6.2 14 10M10 14l-3.8 3.8" />
-      </svg>
-    </IconFrame>
-  );
-}
-
-function ShieldIcon() {
-  return (
-    <IconFrame>
-      <svg
-        viewBox="0 0 24 24"
-        className="h-7 w-7"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.8"
-      >
-        <path d="M12 3 20 7v6c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V7z" />
-        <path d="M9.3 12.2 11 14l3.8-4.4" />
-      </svg>
-    </IconFrame>
-  );
-}

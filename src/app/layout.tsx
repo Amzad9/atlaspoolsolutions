@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
+import LoadingSplash from "../components/LoadingSplash";
+
 export const metadata: Metadata = {
   title: "Atlas Pool Solutions",
   description:
@@ -14,7 +16,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        <LoadingSplash
+          src="/new/Run%20Like%20a%20Girl%2004.gif"
+          alt="Run Like a Girl loading"
+          durationMs={2000}
+        />
+        {children}
+      </body>
     </html>
   );
 }
